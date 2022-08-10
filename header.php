@@ -236,91 +236,24 @@
                                     </div><!-- menu-header -->
                                     
                                     <nav class="menu-body">
-                                        <div class="menu-folder"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-bell" aria-hidden="true"></i></span><span class="content">Nível 1</span></a>
-                                        <ul>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-heart" aria-hidden="true"></i></span><span class="content">Nível 2</span></a></li>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-address-book" aria-hidden="true"></i></span><span class="content">Nível 2</span></a>
-                                            <ul>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-book" aria-hidden="true"></i></span><span class="content">Nível 3</span></a></li>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-tree" aria-hidden="true"></i></span><span class="content">Nível 3</span></a>
-                                                <ul>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                </ul>
-                                                </li>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-moon" aria-hidden="true"></i></span><span class="content">Nível 3</span></a></li>
-                                            </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-archive" aria-hidden="true"></i></span><span class="content">Nível 2</span></a></li>
-                                        </ul>
-                                        </div>
-                                        <div class="menu-folder"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-bell" aria-hidden="true"></i></span><span class="content">Nível 1</span></a>
-                                        <ul>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-heart" aria-hidden="true"></i></span><span class="content">Nível 2</span></a></li>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-address-book" aria-hidden="true"></i></span><span class="content">Nível 2</span></a>
-                                            <ul>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-book" aria-hidden="true"></i></span><span class="content">Nível 3</span></a></li>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-tree" aria-hidden="true"></i></span><span class="content">Nível 3</span></a>
-                                                <ul>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                </ul>
-                                                </li>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-moon" aria-hidden="true"></i></span><span class="content">Nível 3</span></a></li>
-                                            </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-archive" aria-hidden="true"></i></span><span class="content">Nível 2</span></a></li>
-                                        </ul>
-                                        </div>
-                                        <div class="menu-folder"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-bell" aria-hidden="true"></i></span><span class="content">Nível 1</span></a>
-                                        <ul>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-heart" aria-hidden="true"></i></span><span class="content">Nível 2</span></a></li>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-address-book" aria-hidden="true"></i></span><span class="content">Nível 2</span></a>
-                                            <ul>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-book" aria-hidden="true"></i></span><span class="content">Nível 3</span></a></li>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-tree" aria-hidden="true"></i></span><span class="content">Nível 3</span></a>
-                                                <ul>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                    <li><a class="menu-item" href="javascript: void(0)"><span class="content">Nível 4</span></a></li>
-                                                </ul>
-                                                </li>
-                                                <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-moon" aria-hidden="true"></i></span><span class="content">Nível 3</span></a></li>
-                                            </ul>
-                                            </li>
-                                            <li><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-archive" aria-hidden="true"></i></span><span class="content">Nível 2</span></a></li>
-                                        </ul>
-                                        </div><a class="menu-item divider" href="javascript: void(0)"><span class="icon"><i class="fas fa-bell" aria-hidden="true"></i></span><span class="content">Item de nível 1</span></a><a class="menu-item divider" href="javascript: void(0)"><span class="icon"><i class="fas fa-bell" aria-hidden="true"></i></span><span class="content">Item de nível 1</span></a>
-                                    </nav><!-- menu-body -->                                    
+                                        <?php
+                                            wp_nav_menu( array(
+                                                'theme_location' => 'ifmt_wp_main_menu',
+                                                'container'       => '',
+                                                'container_class' => '',
+                                                'items_wrap'      => '<ul class="">%3$s</ul>',
+                                                'link_before'     => '<span class="content">',                          
+                                                'link_after'      => '</span>',
+                                                'link_class'      => 'menu-item'                                                  
+                                            ) );
+                                        ?>
+                                    </nav>
 
-
-                                    <div class="menu-footer">
-                                        <div class="menu-logos">
-                                            <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/logo-temp.png" alt="Imagem ilustrativa"/>
-                                        </div>
-
-                                        <div class="menu-links"><a href="javascript: void(0)"><span class="mr-1">Link externo 1</span><i class="fas fa-external-link-square-alt" aria-hidden="true"></i></a><a href="javascript: void(0)"><span class="mr-1">Link externo 2</span><i class="fas fa-external-link-square-alt" aria-hidden="true"></i></a></div>
-                                        
-                                        <div class="menu-social">
-                                        
-                                            <div class="text-semi-bold mb-1">Redes Sociais</div>
-                                            
-                                            <div class="sharegroup">
-                                                <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></div>
-                                                <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></div>
-                                                <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></div>
-                                                <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></div>
-                                            </div>
-                                        
-                                        </div>
-
-                                        <div class="menu-info">
-                                            <div class="text-center text-down-01">Todo o conteúdo deste site está publicado sob a licença <strong>Creative Commons Atribuição-SemDerivações 3.0</strong></div>
-                                        </div>
+                                    <!--
+                                    <div class="menu-footer">                                        
                                     </div>
-
+                                    -->
+                                    
                                 </div><!-- menu-panel -->
                                 <div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
                             </div><!-- menu-container -->

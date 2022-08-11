@@ -23,17 +23,36 @@ function ifmtwp_load_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );
 
-register_nav_menus(
-    array(
-        'ifmt_wp_main_menu' => 'Menu Principal',
-        'ifmt_wp_footer_menu' => 'Menu Secundario'
-    )
-);
 
 /**
- * Tira o attr lazy das imagens
+ * Carregamentos das configurações do wordpress:
+ * 1 - adiciona os menus
+ * 2 - retira o attr lazy das imagens (imagens não sobrepoêm a página)
+ * 3 - adiciona theme customize do logo do site (campus)
+ *
+ * @return void
  */
-add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+function ifmtwp_load_config(){
+
+    //1
+    register_nav_menus(
+        array(
+            'ifmt_wp_main_menu' => 'Menu Principal',
+            'ifmt_wp_footer_menu' => 'Menu Secundario'
+        )
+    );
+
+    //2
+    add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+
+    //3
+    add_theme_support('custom-logo', array(
+        'width' => 120,
+        'height' => 40
+    ));
+}
+add_action('after_setup_theme', 'ifmtwp_load_config', 0);
+
 
 
 /**

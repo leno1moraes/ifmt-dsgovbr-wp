@@ -22,9 +22,29 @@
 
                     <div class="header-top">
 
-                        <div class="header-logo"><img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/logo-temp.png" alt="logo"/>
+                        <div class="header-logo">
+                            <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/gov-br-logo.png" alt="logo"/>
+
                             <span class="br-divider vertical mx-half mx-sm-1"></span>
-                            <div class="header-sign">Assinatura</div>
+                            
+                            <!--
+                            <div class="header-sign">
+                                Assinatura
+                                <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/ifmt-logo-reitoria.png" alt="logo"/>
+                            </div>
+                            -->
+                            <div class="header-sign">
+                                <?php
+                                    if ( has_custom_logo()){
+                                        the_custom_logo();
+                                    }else{
+                                ?>
+                                    Logotipo do Campus
+                                <?php
+                                
+                                    }
+                                ?>
+                            </div>
                         </div>
 
                         <div class="header-actions">

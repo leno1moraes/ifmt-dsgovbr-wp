@@ -26,13 +26,7 @@
                             <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/gov-br-logo.png" alt="logo"/>
 
                             <span class="br-divider vertical mx-half mx-sm-1"></span>
-                            
-                            <!--
-                            <div class="header-sign">
-                                Assinatura
-                                <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/ifmt-logo-reitoria.png" alt="logo"/>
-                            </div>
-                            -->
+                                                        
                             <div class="header-sign">
                                 <?php
                                     if ( has_custom_logo()){
@@ -98,6 +92,7 @@
                             </div><!-- header-functions dropdown -->   
                             
                             <div class="header-search-trigger">
+                                pesquisar aqui
                                 <button class="br-button circle" type="button" aria-label="Abrir Busca" data-toggle="search" data-target=".header-search"><i class="fas fa-search" aria-hidden="true"></i>
                                 </button>
                             </div><!-- header-search-trigger -->                            
@@ -222,15 +217,9 @@
                         </div>
 
                         <div class="header-search" id="main-searchbox">
-                            <div class="br-input has-icon">
-                                <label for="searchbox">Texto da pesquisa</label>
-                                <input id="searchbox" type="text" placeholder="O que você procura?"/>
-                                <button class="br-button circle small" type="button" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                            <button class="br-button circle search-close ml-1" type="button" aria-label="Fechar Busca" data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
-                            </button>
-                        </div>
+                            <?php get_search_form(); ?>
+                        </div>                        
+
                     </div><!-- header-bottom -->
 
                 </div><!-- container-lg -->

@@ -1,5 +1,8 @@
 <?php
 
+
+require get_template_directory() . '/assets/inc/metabox.php';
+
 /**
  * Carregamentos de scripts
  *
@@ -19,9 +22,73 @@ function ifmtwp_load_scripts(){
     wp_enqueue_style('ifmtwp-Fontawesome','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
         
     //Design System de Governo
-    wp_enqueue_script('ifmtwp-js-govbr', get_template_directory_uri().'/assets/node_modules/@govbr-ds/core/dist/core-init.js', array(), '1.0', true);         
+    wp_enqueue_script('ifmtwp-js-govbr', get_template_directory_uri().'/assets/node_modules/@govbr-ds/core/dist/core-init.js', array(), '1.0', true);
+
+    //adiciona os estilos e scripts do slider (carousel)
+    wp_enqueue_style( 'slider-style', get_template_directory_uri() . '/assets/css/slider.css' );
+    wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/assets/js/jquery.carouFredSel-6.2.1.js', array('jquery') );
+    wp_enqueue_script( 'custom-caroufredsel', get_template_directory_uri() . '/assets/js/main.carouFredSel.js', array('caroufredsel') );    
+
+    
 }
 add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );
+
+
+/**
+ * Função para imprimir o slider (carousel)
+ *
+ * @return void
+ */
+function the_slider() {
+    require get_template_directory() . '/template-slider.php';
+}
+
+
+/**
+ * Adicionar o módulo Slide no Wordpress Admin
+ *
+ * @return void
+ */
+add_action( 'init', 'create_post_type_sliders' );
+function create_post_type_sliders() {
+    //Labels customizados
+    $labels = array(
+                    'name' => _x('Sliders', 'post type general name'),
+                    'singular_name' => _x('Slider', 'post type singular name'),
+                    'add_new' => _x('Novo slider', 'itens'),
+                    'add_new_item' => __('Novo slider'),
+                    'edit_item' => __('Editar slider'),
+                    'new_item' => __('Novo slider'),
+                    'all_items' => __('Todos sliders'),
+                    'view_item' => __('Ver slider'),
+                    'search_items' => __('Procurar slider'),
+                    'not_found' => __('Nenhuma slider encontrado'),
+                    'not_found_in_trash' => __('Nenhuma slider encontrado no lixo'),
+                    'parent_item_colon' => '',
+                    'menu_name' => 'Sliders'
+    );
+    
+    //Registra o cpt com os labels acima
+    register_post_type( 'sliders', array(
+                                        'labels' => $labels,
+                                        'menu_icon' => 'dashicons-slides',
+                                        'public' => true,
+                                        'publicly_queryable' => true,
+                                        'show_ui' => true,
+                                        'show_in_menu' => true,
+                                        'query_var' => true,
+                                        'rewrite' => array(
+                                        'slug' => 'sliders',
+                                        'with_front' => false,
+                                        ),
+                            'capability_type' => 'post',
+                            'has_archive' => true,
+                            'menu_position' => 5,
+                            'supports' => array( 'title', 'editor', 'thumbnail' )
+                            )
+    );
+   
+}
 
 
 /**
@@ -29,7 +96,7 @@ add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );
  * 1 - adiciona os menus
  * 2 - retira o attr lazy das imagens (imagens não sobrepoêm a página)
  * 3 - adiciona theme customize do logo do site (campus)
- *
+ * 4 - adiciona customização de posts para imagens destacadas
  * @return void
  */
 function ifmtwp_load_config(){
@@ -44,14 +111,18 @@ function ifmtwp_load_config(){
 
     //2
     add_filter( 'wp_lazy_loading_enabled', '__return_false' );
-
+    
     //3
     add_theme_support('custom-logo', array(
         'width' => 120,
         'height' => 40
     ));
+
+    //4
+    add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'ifmtwp_load_config', 0);
+
 
 
 

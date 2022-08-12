@@ -2,6 +2,7 @@
 
 
 require get_template_directory() . '/assets/inc/metabox.php';
+require get_template_directory() . '/assets/inc/customizer.php';
 
 /**
  * Carregamentos de scripts

@@ -49,8 +49,8 @@
                                 <div class="br-list">
                                     <div class="header">
                                         <div class="title">Acesso Rápido</div>
-                                    </div>  
-                                    <a class="br-item" href="javascript:void(0)">Link de acesso 1</a>
+                                    </div>                                      
+                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url01', 'javascript:void(0)' ); ?>">Link de acesso 1</a>
                                     <a class="br-item" href="javascript:void(0)">Link de acesso 2</a>
                                     <a class="br-item" href="javascript:void(0)">Link de acesso 3</a>
                                     <a class="br-item" href="javascript:void(0)">Link de acesso 4</a>
@@ -211,13 +211,15 @@
                                 </button>
                             </div>
                             <div class="header-info">
-                                                           
-                                <div class="header-title">
-                                    <?php                                         
-                                        bloginfo('name'); 
-                                    ?> 
-                                </div>          
-
+                            
+                                <a href="<?php site_url( '#' ); ?>">
+                                    <div class="header-title">
+                                        <?php                                         
+                                            bloginfo('name'); 
+                                        ?> 
+                                    </div>          
+                                </a>
+                                
                                 <div class="header-subtitle">
                                     <?php                                         
                                         bloginfo('description'); 
@@ -245,13 +247,34 @@
                                 <div class="menu-panel">
 
                                     <div class="menu-header">
+
                                         <div class="menu-title">
-                                            <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/logo-temp.png" alt="Imagem ilustrativa"/><span>Identificação do site ou Sistema</span>
+                                            <?php
+                                                if ( has_custom_logo()){
+                                                    the_custom_logo();
+                                                }else{
+                                            ?>
+                                                Logotipo do Campus
+                                            <?php
+                                            
+                                                }
+                                            ?>
+
+                                            <span class="br-divider vertical mx-half mx-sm-3"></span>
+
+                                            <span>
+                                                <?php                                         
+                                                    bloginfo('description'); 
+                                                ?>
+                                            </span>                                            
+
                                         </div>
+
                                         <div class="menu-close">
                                             <button class="br-button circle" type="button" aria-label="Fechar o menu" data-dismiss="menu"><i class="fas fa-times" aria-hidden="true"></i>
                                             </button>
                                         </div>
+
                                     </div><!-- menu-header -->
                                     
                                     <nav class="menu-body">

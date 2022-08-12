@@ -34,6 +34,7 @@ function ifmtwp_load_scripts(){
 add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );
 
 
+
 /**
  * Função para imprimir o slider (carousel)
  *
@@ -45,58 +46,13 @@ function the_slider() {
 
 
 /**
- * Adicionar o módulo Slide no Wordpress Admin
- *
- * @return void
- */
-add_action( 'init', 'create_post_type_sliders' );
-function create_post_type_sliders() {
-    //Labels customizados
-    $labels = array(
-                    'name' => _x('Sliders', 'post type general name'),
-                    'singular_name' => _x('Slider', 'post type singular name'),
-                    'add_new' => _x('Novo slider', 'itens'),
-                    'add_new_item' => __('Novo slider'),
-                    'edit_item' => __('Editar slider'),
-                    'new_item' => __('Novo slider'),
-                    'all_items' => __('Todos sliders'),
-                    'view_item' => __('Ver slider'),
-                    'search_items' => __('Procurar slider'),
-                    'not_found' => __('Nenhuma slider encontrado'),
-                    'not_found_in_trash' => __('Nenhuma slider encontrado no lixo'),
-                    'parent_item_colon' => '',
-                    'menu_name' => 'Sliders'
-    );
-    
-    //Registra o cpt com os labels acima
-    register_post_type( 'sliders', array(
-                                        'labels' => $labels,
-                                        'menu_icon' => 'dashicons-slides',
-                                        'public' => true,
-                                        'publicly_queryable' => true,
-                                        'show_ui' => true,
-                                        'show_in_menu' => true,
-                                        'query_var' => true,
-                                        'rewrite' => array(
-                                        'slug' => 'sliders',
-                                        'with_front' => false,
-                                        ),
-                            'capability_type' => 'post',
-                            'has_archive' => true,
-                            'menu_position' => 5,
-                            'supports' => array( 'title', 'editor', 'thumbnail' )
-                            )
-    );
-   
-}
-
-
-/**
  * Carregamentos das configurações do wordpress:
  * 1 - adiciona os menus
  * 2 - retira o attr lazy das imagens (imagens não sobrepoêm a página)
  * 3 - adiciona theme customize do logo do site (campus)
  * 4 - adiciona customização de posts para imagens destacadas
+ * 5 - adiciona feed rss
+ * 
  * @return void
  */
 function ifmtwp_load_config(){
@@ -120,6 +76,14 @@ function ifmtwp_load_config(){
 
     //4
     add_theme_support('post-thumbnails');
+
+    //5
+    add_theme_support('automatic-feed-links');
+
+    //6
+    add_theme_support( 'title-tag' );
+
+    add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ));
 }
 add_action('after_setup_theme', 'ifmtwp_load_config', 0);
 
@@ -211,3 +175,12 @@ function replace_li_submenu_class($menu) {
     return $menu;      
 }
 add_filter('wp_nav_menu','replace_li_submenu_class'); 
+
+/**
+ * Caso não exista a tag wp_body_open, essa função o adiciona
+ */
+if ( ! function_exists( 'wp_body_open' ) ){
+    function wp_body_open(){
+        do_action( 'wp_body_open' );
+    }
+}

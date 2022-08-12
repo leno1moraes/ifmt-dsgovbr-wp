@@ -211,8 +211,18 @@
                                 </button>
                             </div>
                             <div class="header-info">
-                                <div class="header-title">Template básico</div>
-                                <div class="header-subtitle">Subtítulo do Header</div>
+                                                           
+                                <div class="header-title">
+                                    <?php                                         
+                                        bloginfo('name'); 
+                                    ?> 
+                                </div>          
+
+                                <div class="header-subtitle">
+                                    <?php                                         
+                                        bloginfo('description'); 
+                                    ?>                                    
+                                </div>
                             </div>
                         </div>
 

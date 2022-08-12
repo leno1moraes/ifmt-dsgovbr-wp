@@ -3,7 +3,7 @@
   'posts_per_page' => 5,
   'orderby' => 'date',
   'order' => 'DESC',
-  //'post_type' => 'sliders',
+  'post_type' => 'post',
  );
  $sliders_home = new WP_Query( $args );
 ?>
@@ -19,7 +19,7 @@
 
      <?php
       if ( has_post_thumbnail() ) {
-        the_post_thumbnail('large');
+        the_post_thumbnail('large', array( 'loading' => '' ) );
       } else {
         //echo '<img src="' . get_template_directory() . '/assets/images/thumb-default.jpg" alt="'.the_permalink().'">';
         //echo "carrossel não está ativado";

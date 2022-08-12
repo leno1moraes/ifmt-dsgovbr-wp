@@ -35,10 +35,10 @@
    }
    
    .slider .prev {
-    background: url('../images/prev.png') center center no-repeat transparent;
+    background: url('../images/prev.png') center center no-repeat;
    }
    
    .slider .next {
-    background: url('../images/next.png') center center no-repeat transparent;
+    background: url('../images/next.png') center center no-repeat;
     right: 0;
    }

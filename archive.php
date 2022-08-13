@@ -4,34 +4,15 @@
 
 
 <!-- content body -->
-
-
-
-
 <main class="d-flex flex-fill mb-5" id="main">
-
-
-
-
     <div class="container-lg d-flex">
-
-    
-
         <div class="row">
-
-        
-        
-
             <div class="col mb-5">
+                <div class="main-content pl-sm-3 mt-4" id="main-content">
 
-                <div class="main-content pl-sm-3 mt-4" id="main-content">                
-
-
-                <section class="carousel-wrapper">
-                    <?php get_template_part('template-parts/jumbotron-carousel'); ?>
-                </section>   
-
-
+                    <?php the_archive_title('<h3 class="">', '</h3> '); ?>
+                    <br>
+                    
                     <?php
                     if ( have_posts() ):
                         while (have_posts()) :

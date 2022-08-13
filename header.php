@@ -62,14 +62,38 @@
                                         <div class="title">Acesso Rápido</div>
                                     </div>                                      
                                     
-
-                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url01', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer01', 'Link de acesso 1' ); ?></a>
-
+                                    
+                                    <?php 
+                                        if ( get_theme_mod( 'set_text_slug_customizer01', '' ) <> ''):
+                                    ?>
+                                        <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url01', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer01', 'Link de acesso 1' ); ?></a>
+                                    <?php
+                                        endif;
+                                    ?>
+                                    
+                                    <?php 
+                                        if ( get_theme_mod( 'set_text_slug_customizer02', '' ) <> ''):
+                                    ?>
                                     <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url02', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer02', 'Link de acesso 2' ); ?></a>
+                                    <?php
+                                        endif;
+                                    ?>                                    
 
+                                    <?php 
+                                        if ( get_theme_mod( 'set_text_slug_customizer03', '' ) <> ''):
+                                    ?>
                                     <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url03', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer03', 'Link de acesso 3' ); ?></a>
+                                    <?php
+                                        endif;
+                                    ?>                                    
 
+                                    <?php 
+                                        if ( get_theme_mod( 'set_text_slug_customizer04', '' ) <> ''):
+                                    ?>
                                     <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url04', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer04', 'Link de acesso 4' ); ?></a>
+                                    <?php
+                                        endif;
+                                    ?>
 
                                 </div>
                             </div>

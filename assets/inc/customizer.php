@@ -5,6 +5,37 @@ function ifmtwp_customizer( $wp_customize ){
 
 
     $wp_customize->add_section(
+        'sec_media_logo_404',
+        array(
+             'title' => 'Logo de Erro 404',
+             'description' => 'Use uma imagem para erro 404'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_media_logo_404',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Logo de Erro 404',
+                'sanitize_callback' => 'wp_filter_nohtml_kses'
+            )
+        );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_404', 
+                                                                        array(
+                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
+                                                                        'section' => 'sec_media_logo_404',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+
+
+    /**
+     * Logo do Governo Federal
+     */
+    $wp_customize->add_section(
         'sec_media_logo_gov_federal',
         array(
              'title' => 'Logo do Governo Federal',

@@ -25,16 +25,27 @@ function ifmtwp_load_scripts(){
     //Design System de Governo
     wp_enqueue_script('ifmtwp-js-govbr', get_template_directory_uri().'/assets/node_modules/@govbr-ds/core/dist/core-init.js', array(), '1.0', true);
 
-    //adiciona os estilos e scripts do slider (carousel)
-    wp_enqueue_style( 'slider-style', get_template_directory_uri() . '/assets/css/slider.css' );
-    wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/assets/js/jquery.carouFredSel-6.2.1.js', array('jquery') );
-    wp_enqueue_script( 'custom-caroufredsel', get_template_directory_uri() . '/assets/js/main.carouFredSel.js', array('caroufredsel') );    
+    //estilo carousel jumbotron
+    wp_enqueue_style( 'jumbotron-style', get_template_directory_uri() . '/assets/css/jumbotron-carousel-mod.css');
+    wp_enqueue_script( 'jumbotron-script', get_template_directory_uri() . '/assets/js/bundle.js', array('jquery'), '1.7', true );
 
     
 }
 add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );
 
 
+
+/**
+ * função externa para carrossel
+ *
+ * @param [type] $option
+ * @return void
+ */
+function idg_wp_get_option ( $option ) {
+	$theme_key = strtolower(get_stylesheet());
+	$option_key = $theme_key . '_theme_options';
+	return get_option($option_key . $option);
+}
 
 /**
  * Função para imprimir o slider (carousel)

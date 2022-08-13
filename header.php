@@ -23,7 +23,18 @@
                     <div class="header-top">
 
                         <div class="header-logo">
-                            <img src="/wp-content/themes/ifmt-dsgovbr-wp/assets/images/gov-br-logo.png" alt="logo"/>
+                            <?php 
+                                if ( get_theme_mod( 'set_media_logo_gov_federal' ) > 0 ) { 
+                                    echo '<img src="'.wp_get_attachment_image_url( get_theme_mod( 'set_media_logo_gov_federal' ), 'full').'" alt="logo"/>'; 
+                                } else {
+                                    echo 'Logotipo do Campus';
+                                }                              
+                            ?>
+                            <?php 
+                            /*if ( get_theme_mod( 'set_media_logo_gov_federal' ) > 0 ) { 
+                                echo wp_get_attachment_image( get_theme_mod( 'set_media_logo_gov_federal' ), 'media' ); 
+                            }*/                            
+                            ?>	                            
 
                             <span class="br-divider vertical mx-half mx-sm-1"></span>
                                                         
@@ -50,10 +61,16 @@
                                     <div class="header">
                                         <div class="title">Acesso Rápido</div>
                                     </div>                                      
-                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url01', 'javascript:void(0)' ); ?>">Link de acesso 1</a>
-                                    <a class="br-item" href="javascript:void(0)">Link de acesso 2</a>
-                                    <a class="br-item" href="javascript:void(0)">Link de acesso 3</a>
-                                    <a class="br-item" href="javascript:void(0)">Link de acesso 4</a>
+                                    
+
+                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url01', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer01', 'Link de acesso 1' ); ?></a>
+
+                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url02', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer02', 'Link de acesso 2' ); ?></a>
+
+                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url03', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer03', 'Link de acesso 3' ); ?></a>
+
+                                    <a class="br-item" href="<?php echo get_theme_mod( 'set_slug_customizer_url04', '#' ); ?>"><?php echo get_theme_mod( 'set_text_slug_customizer04', 'Link de acesso 4' ); ?></a>
+
                                 </div>
                             </div>
                             <span class="br-divider vertical mx-half mx-sm-1"></span>
@@ -210,20 +227,13 @@
                                 <button class="br-button small circle" type="button" aria-label="Menu" data-toggle="menu" data-target="#main-navigation" id="navigation"><i class="fas fa-bars" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <div class="header-info">
-                            
-                                <a href="<?php site_url( '#' ); ?>">
-                                    <div class="header-title">
-                                        <?php                                         
-                                            bloginfo('name'); 
-                                        ?> 
-                                    </div>          
-                                </a>
+                            <div class="header-info">                                                        
+                                <div class="header-title">
+                                    <?php echo get_theme_mod( 'set_text_slug_insituicao', 'Instituição' ); ?>                                        
+                                </div>          
                                 
                                 <div class="header-subtitle">
-                                    <?php                                         
-                                        bloginfo('description'); 
-                                    ?>                                    
+                                    <?php echo get_theme_mod( 'set_text_slug_campus', 'Campus' ); ?>                                                                        
                                 </div>
                             </div>
                         </div>
@@ -258,14 +268,12 @@
                                             <?php
                                             
                                                 }
-                                            ?>
+                                            ?>                                             
 
                                             <span class="br-divider vertical mx-half mx-sm-3"></span>
 
                                             <span>
-                                                <?php                                         
-                                                    bloginfo('description'); 
-                                                ?>
+                                                <?php echo get_theme_mod( 'set_text_slug_campus', 'Campus' ); ?> 
                                             </span>                                            
 
                                         </div>

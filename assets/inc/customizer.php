@@ -2,12 +2,102 @@
 
 
 function ifmtwp_customizer( $wp_customize ){
-    //link de acesso 1
+
+
+    $wp_customize->add_section(
+        'sec_media_logo_gov_federal',
+        array(
+             'title' => 'Logo do Governo Federal',
+             'description' => 'Use uma imagem oficial do governo federal'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_media_logo_gov_federal',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Logo do Governo Federal',
+                'sanitize_callback' => 'wp_filter_nohtml_kses'
+            )
+        );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_gov_federal', 
+                                                                        array(
+                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
+                                                                        'section' => 'sec_media_logo_gov_federal',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+
+
+    /**
+     * Texto da Instituição
+     */
+    $wp_customize->add_section(
+        'sec_text_slug_insituicao',
+        array(
+             'title' => 'Instituição',
+             'description' => 'Campo para preencher com o nome da Instituição. Exemplo: Instituto Federal de Mato Grosso'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_slug_insituicao',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Instituição',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_slug_insituicao',
+            array(
+                'label' => 'Instituição',
+                'section' => 'sec_text_slug_insituicao',
+                'type' => 'text'
+            )
+        ); 
+
+    /**
+     * Texto da Campus
+     */
+    $wp_customize->add_section(
+        'sec_text_slug_campus',
+        array(
+             'title' => 'Campus',
+             'description' => 'Campo para preencher com o nome do Campus'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_slug_campus',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Campus',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_slug_campus',
+            array(
+                'label' => 'Campus',
+                'section' => 'sec_text_slug_campus',
+                'type' => 'text'
+            )
+        ); 
+
+    
+    /**
+     * Link de Acesso 1 - Inicio
+     */
     $wp_customize->add_section( 
         'sec_theme_slug_customizer01', 
         array(
-            'title' => esc_html__( 'Link de Acesso 1', 'theme_slug' ),
-            'priority' => 150
+            'title' => esc_html__( 'Link de Acesso 1', 'theme_slug' )
         )
     );                      
         $wp_customize->add_setting( 
@@ -24,7 +114,205 @@ function ifmtwp_customizer( $wp_customize ){
                 'section' => 'sec_theme_slug_customizer01',
                 'type' => 'url'
             )
-        );    
+        );
+
+    $wp_customize->add_section(
+        'sec_text_slug_customizer01',
+        array(
+             'title' => 'Texto do Link de Acesso 1',
+             'description' => 'Texto do Link de Acesso 1'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_slug_customizer01',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Texto do Link de Acesso 1',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_slug_customizer01',
+            array(
+                'label' => 'Texto do Link de Acesso 1',
+                'description' => 'Adicione o texto aqui',
+                'section' => 'sec_text_slug_customizer01',
+                'type' => 'text'
+            )
+        );        
+    /**
+     * Link de Acesso 1 - Fim
+     */
+
+
+    /**
+     * Link de Acesso 2 - Inicio
+     */
+    $wp_customize->add_section( 
+        'sec_theme_slug_customizer02', 
+        array(
+            'title' => esc_html__( 'Link de Acesso 2', 'theme_slug' )
+        )
+    );                      
+        $wp_customize->add_setting( 
+            'set_slug_customizer_url02', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+        
+        $wp_customize->add_control( 
+            'set_slug_customizer_url02', 
+            array(
+                'label' => esc_html__( 'Insira a URL aqui', 'theme_slug' ),
+                'section' => 'sec_theme_slug_customizer02',
+                'type' => 'url'
+            )
+        );
+
+        $wp_customize->add_section(
+            'sec_text_slug_customizer02',
+            array(
+                 'title' => 'Texto do Link de Acesso 2',
+                 'description' => 'Texto do Link de Acesso 2'
+            )
+        );
+        
+            $wp_customize->add_setting(
+                'set_text_slug_customizer02',
+                array(
+                    'type' => 'theme_mod',
+                    'default' => 'Texto do Link de Acesso 2',
+                    'sanitize_callback' => 'sanitize_text_field'
+                )
+            );
+        
+            $wp_customize->add_control(
+                'set_text_slug_customizer02',
+                array(
+                    'label' => 'Texto do Link de Acesso 2',
+                    'description' => 'Adicione o texto aqui',
+                    'section' => 'sec_text_slug_customizer02',
+                    'type' => 'text'
+                )
+            );         
+    /**
+     * Link de Acesso 2 - Fim
+     */     
+
+    /**
+     * Link de Acesso 3 - Inicio
+     */
+    $wp_customize->add_section( 
+        'sec_theme_slug_customizer03', 
+        array(
+            'title' => esc_html__( 'Link de Acesso 3', 'theme_slug' )
+        )
+    );                      
+        $wp_customize->add_setting( 
+            'set_slug_customizer_url03', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+        
+        $wp_customize->add_control( 
+            'set_slug_customizer_url03', 
+            array(
+                'label' => esc_html__( 'Insira a URL aqui', 'theme_slug' ),
+                'section' => 'sec_theme_slug_customizer03',
+                'type' => 'url'
+            )
+        );
+
+        $wp_customize->add_section(
+            'sec_text_slug_customizer03',
+            array(
+                 'title' => 'Texto do Link de Acesso 3',
+                 'description' => 'Texto do Link de Acesso 3'
+            )
+        );
+        
+            $wp_customize->add_setting(
+                'set_text_slug_customizer03',
+                array(
+                    'type' => 'theme_mod',
+                    'default' => 'Texto do Link de Acesso 3',
+                    'sanitize_callback' => 'sanitize_text_field'
+                )
+            );
+        
+            $wp_customize->add_control(
+                'set_text_slug_customizer03',
+                array(
+                    'label' => 'Texto do Link de Acesso 3',
+                    'description' => 'Adicione o texto aqui',
+                    'section' => 'sec_text_slug_customizer03',
+                    'type' => 'text'
+                )
+            );         
+    /**
+     * Link de Acesso 3 - Fim
+     */ 
+
+    /**
+     * Link de Acesso 4 - Inicio
+     */
+    $wp_customize->add_section( 
+        'sec_theme_slug_customizer04', 
+        array(
+            'title' => esc_html__( 'Link de Acesso 4', 'theme_slug' )
+        )
+    );                      
+        $wp_customize->add_setting( 
+            'set_slug_customizer_url04', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+        
+        $wp_customize->add_control( 
+            'set_slug_customizer_url04', 
+            array(
+                'label' => esc_html__( 'Insira a URL aqui', 'theme_slug' ),
+                'section' => 'sec_theme_slug_customizer04',
+                'type' => 'url'
+            )
+        );
+
+        $wp_customize->add_section(
+            'sec_text_slug_customizer04',
+            array(
+                 'title' => 'Texto do Link de Acesso 4',
+                 'description' => 'Texto do Link de Acesso 4'
+            )
+        );
+        
+            $wp_customize->add_setting(
+                'set_text_slug_customizer04',
+                array(
+                    'type' => 'theme_mod',
+                    'default' => 'Texto do Link de Acesso 4',
+                    'sanitize_callback' => 'sanitize_text_field'
+                )
+            );
+        
+            $wp_customize->add_control(
+                'set_text_slug_customizer04',
+                array(
+                    'label' => 'Texto do Link de Acesso 4',
+                    'description' => 'Adicione o texto aqui',
+                    'section' => 'sec_text_slug_customizer04',
+                    'type' => 'text'
+                )
+            ); 
+
+    /**
+     * Link de Acesso 4 - Fim
+     */     
+
 
 }
 add_action( 'customize_register', 'ifmtwp_customizer' );

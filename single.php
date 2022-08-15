@@ -2,6 +2,10 @@
 
 <?php get_header(); ?>
 
+<!-- 
+    Template das noticias
+-->
+
 <!-- content body -->
 <main class="d-flex flex-fill mb-5" id="main">
     <div class="container-lg d-flex">

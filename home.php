@@ -19,7 +19,7 @@
                 <div class="main-content pl-sm-3 mt-4" id="main-content">                
 
                 <a class="br-button secondary large mt-3 mt-sm-0 ml-sm-3 state-published" 
-                    href="">
+                    href="<?php echo home_url( '/noticias' ); ?>">
                         Mais notícias
                 </a>                                                
 

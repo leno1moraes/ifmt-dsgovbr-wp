@@ -22,11 +22,11 @@ Template Name: General Template
                         <article>
                             <h2><?php the_title(); ?></h2>
                             <div>
-                                <!--
+                                
                                 <p>Postado em <?php echo get_the_date(); ?> por <?php the_author_posts_link(); ?></p>
                                 <p>Categorias: <?php the_category(); ?> </p>
                                 <p>Tags: <?php the_tags('', ', '); ?> </p>
-                                -->
+                                
                             </div>
                             <?php the_content(); 
                             ?>

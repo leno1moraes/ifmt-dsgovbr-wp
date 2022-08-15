@@ -1,4 +1,11 @@
+
+
+
 <?php
+
+//d-block
+//d-md-block
+
 	$args = [];
 	if( idg_wp_get_option('_main_carousel') ){
 		$args['category_name'] = idg_wp_get_option('_main_carousel');
@@ -11,7 +18,8 @@
 	}
 	$feature_news_query = new WP_Query( $args );
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>
-
+		
+		
 		<div id="jumbotron-carousel" class="carousel slide carousel-fade" data-ride="carousel"
 	     data-interval="5000">
 		<div class="carousel-inner">
@@ -35,6 +43,7 @@
 				<?php $i ++; endwhile;
 			wp_reset_postdata(); ?>
 		</div>
+		
 		<a class="carousel-control-prev" href="#jumbotron-carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>

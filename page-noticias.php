@@ -17,15 +17,14 @@ Template Name: Page Noticias
                 
                 <?php
 
-                    //the_content();                                                           
+                    the_content();                                                           
                                     
                 ?>
 
                 <?php
 
                 $args = array(
-                    'posts_per_page' => -1,
-                    'max_num_pages' => 2
+                    'posts_per_page' => 5
                 );
 
                 $news_query = new WP_Query( $args );

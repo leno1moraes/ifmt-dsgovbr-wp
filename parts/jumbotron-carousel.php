@@ -17,6 +17,7 @@
 		<div class="carousel-inner">
 			<?php while ( $feature_news_query->have_posts() ) : $feature_news_query->the_post(); ?>
 				<div class="carousel-item <?php echo $i == 0 ? 'active' : ''; ?>">
+				<a href="<?php the_permalink(); ?>">
 					<?php
 					if ( has_post_thumbnail() ) {
 						$post_thumb = get_the_post_thumbnail_url( get_the_ID(), 'carousel-feature' );
@@ -24,6 +25,7 @@
 						$post_thumb = get_template_directory_uri() . '/assets/img/teste-personagem.jpg';
 					}
 					?>
+				</a>
 					<img class="d-block w-100" src="<?php echo $post_thumb; ?>" alt="Second slide">
 					<div class="carousel-caption d-md-block">
 						<div class="container">

@@ -5,6 +5,35 @@ function ifmtwp_customizer( $wp_customize ){
 
 
     $wp_customize->add_section(
+        'sec_text_tipo_carousel',
+        array(
+             'title' => 'Tipo de carousel',
+             'description' => 'Escolha tipo de carousel: 1-Padrao ou 2-Modificado'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_tipo_carousel',
+            array(
+                'type' => 'theme_mod',
+                'default' => '1',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_tipo_carousel',
+            array(
+                'label' => 'Tipo de carousel',
+                'section' => 'sec_text_tipo_carousel',
+                'type' => 'text'
+            )
+        ); 
+
+    /**
+     * Logo erro 404
+     */
+    $wp_customize->add_section(
         'sec_media_logo_404',
         array(
              'title' => 'Logo de Erro 404',
@@ -30,7 +59,9 @@ function ifmtwp_customizer( $wp_customize ){
                                                                         ) 
                                     ) 
     );
-
+    /**
+     * Logo erro 404
+     */
 
     /**
      * Logo do Governo Federal

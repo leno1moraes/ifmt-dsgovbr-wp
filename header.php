@@ -16,7 +16,7 @@
                 <a class="br-item" href="#main-searchbox" accesskey="3">Ir para a busca (3/4) <span class="br-tag text ml-1">3</span></a><a class="br-item" href="#footer" accesskey="4">Ir para o rodapé (4/4) <span class="br-tag text ml-1">4</span></a>
             </nav>
             
-            <header class="br-header mb-4" id="header" data-sticky="data-sticky">
+            <header class="br-header" id="header" data-sticky="data-sticky">
 
                 <div class="container-lg">  
 
@@ -29,12 +29,7 @@
                                 } else {
                                     echo 'Logotipo do Campus';
                                 }                              
-                            ?>
-                            <?php 
-                            /*if ( get_theme_mod( 'set_media_logo_gov_federal' ) > 0 ) { 
-                                echo wp_get_attachment_image( get_theme_mod( 'set_media_logo_gov_federal' ), 'media' ); 
-                            }*/                            
-                            ?>	                            
+                            ?>                            
 
                             <span class="br-divider vertical mx-half mx-sm-1"></span>
                                                         
@@ -272,11 +267,7 @@
             </header>
 
 
-            <main class="d-flex flex-fill mb-5" id="main">
-                <div class="container-lg d-flex">
-                    <div class="row">
-
-                        <div class="br-menu" id="main-navigation">
+            <div class="br-menu" id="main-navigation">
                             <div class="menu-container">
                                 <div class="menu-panel">
 
@@ -322,17 +313,9 @@
                                             ) );
                                         ?>
                                     </nav>
-
-                                    <!--
-                                    <div class="menu-footer">                                        
-                                    </div>
-                                    -->
                                     
                                 </div><!-- menu-panel -->
                                 <div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
                             </div><!-- menu-container -->
-                        </div><!-- main-navigation -->                     
+                        </div><!-- main-navigation -->  
 
-                    </div><!-- row -->
-                </div> <!-- container-lg d-flex -->
-            </main>

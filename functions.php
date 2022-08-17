@@ -33,7 +33,27 @@ function ifmtwp_load_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );
 
+/**
+ * Habilita as Sidebars/Widgets
+ *
+ * @return void
+ */
+add_action('widgets_init', 'ifmtwp_sidebars');
+function ifmtwp_sidebars(){
 
+    register_sidebar(
+        array(
+            'name' => 'Servico 1',
+            'id' => 'servico-1',
+            'description' => 'Area de serviços 1',
+            'before_widget' => '<div class="card-content"> ',
+            'after_widget' => '</div>',
+            'before-title' => '<div class="card-footer text-center text-bold">',
+            'after-title' => '</div>'
+        )
+    );   
+
+}
 
 /**
  * função externa para carrossel

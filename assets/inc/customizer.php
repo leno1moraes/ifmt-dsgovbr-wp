@@ -5,10 +5,39 @@ function ifmtwp_customizer( $wp_customize ){
 
 
     $wp_customize->add_section(
+        'sec_text_tipo_page_noticias',
+        array(
+             'title' => 'Página de notícias',
+             'description' => 'Escolha tipo da página de notícias: 1-Padrão ou 2-Modificado'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_page_noticias',
+            array(
+                'type' => 'theme_mod',
+                'default' => '1',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_page_noticias',
+            array(
+                'label' => 'Página de notícias',
+                'section' => 'sec_text_tipo_page_noticias',
+                'type' => 'text'
+            )
+        );     
+
+    /**
+     * Seleciona o tipo de Carousel
+     */
+    $wp_customize->add_section(
         'sec_text_tipo_carousel',
         array(
              'title' => 'Tipo de carousel',
-             'description' => 'Escolha tipo de carousel: 1-Padrao ou 2-Modificado'
+             'description' => 'Escolha tipo de carousel: 1-Padrão ou 2-Modificado'
         )
     );
     

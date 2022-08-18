@@ -8,21 +8,13 @@ Template Name: Page Noticias
 
 <!-- content body -->
 <main class="d-flex flex-fill mb-5" id="main">
-
     <div class="container-lg d-flex">
-
         <div class="row">
-
             <div class="col mb-5">
-                
-                <?php
 
-                    // the_content();                                                           
-                                    
-                ?>
-
-                <?php
-
+            <?php
+            if ( get_theme_mod( 'set_text_page_noticias') == '1' ):
+            
                 $args = array(
                     'posts_per_page' => 5
                 );
@@ -43,21 +35,22 @@ Template Name: Page Noticias
                         ?>
                     </article>
                 <?php
-
-            
                     endwhile;
-
                     echo 'paginação';
-
                     the_posts_pagination();    
-
-
                 else:
                 ?>
                     <p>Não há posts</p>
                 <?php
                 endif;
-                ?>      
+                            
+            elseif ( get_theme_mod( 'set_text_page_noticias') == '2' ):
+                the_content();  
+            
+            else:
+                echo "A variável tipo de Página de notícias não foi configurada";
+            endif;
+            ?>  
 
             </div>
         </div>

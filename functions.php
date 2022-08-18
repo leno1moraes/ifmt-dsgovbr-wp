@@ -46,12 +46,72 @@ function ifmtwp_sidebars(){
             'name' => 'Servico 1',
             'id' => 'servico-1',
             'description' => 'Area de serviços 1',
-            'before_widget' => '<div class="card-content"> ',
-            'after_widget' => '</div>',
-            'before-title' => '<div class="card-footer text-center text-bold">',
-            'after-title' => '</div>'
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
         )
     );   
+
+    register_sidebar(
+        array(
+            'name' => 'Servico 2',
+            'id' => 'servico-2',
+            'description' => 'Area de serviços 2',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    ); 
+    
+    register_sidebar(
+        array(
+            'name' => 'Servico 3',
+            'id' => 'servico-3',
+            'description' => 'Area de serviços 3',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );     
+
+    register_sidebar(
+        array(
+            'name' => 'Servico 4',
+            'id' => 'servico-4',
+            'description' => 'Area de serviços 4',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );     
+
+    register_sidebar(
+        array(
+            'name' => 'Servico 5',
+            'id' => 'servico-5',
+            'description' => 'Area de serviços 5',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    ); 
+    
+    register_sidebar(
+        array(
+            'name' => 'Servico 6',
+            'id' => 'servico-6',
+            'description' => 'Area de serviços 6',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );     
 
 }
 

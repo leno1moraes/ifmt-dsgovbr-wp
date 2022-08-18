@@ -26,55 +26,14 @@
                 <a class="br-button secondary large mt-3 mt-sm-0 ml-sm-3 state-published" href="<?php echo home_url( '/noticias' ); ?>">
                     Mais notícias
                 </a> 
-            </div>   
-            
-            <section class="mb-5 my-4x" style="background: #d3ffd1 no-repeat left bottom; padding: 30px 0">
-                
-                    <div class="container">
-                        <div class="row justify-content-center">
-                        
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="br-card hover">
-                                    <!--<div class="card-header">Cabeçário </div>-->
-                                    <div class="card-content">                                                                        
-                                        <div class="card-content"><img src="https://picsum.photos/id/0/500" alt="Imagem de exemplo"/></div>
-                                    </div>
-                                    <div class="card-footer text-center text-bold">Rodapé</div>                                    
-                                </div>
-                            </div> 
-                            
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="br-card hover">
-                                    <div class="card-content">
-                                        <div class="card-content"><img src="<?php echo get_template_directory_uri() . '/assets/images/online-test.png'?>" alt="Imagem de exemplo"/></div>
-                                    </div>  
-                                    <div class="card-footer text-center text-bold">Rodapé</div>                                    
-                                </div>
-                            </div> 
-
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="br-card hover">
-                                    <div class="card-content">
-                                        <div class="card-content"><img src="https://picsum.photos/seed/picsum/200/300" alt="Imagem de exemplo"/></div>
-                                    </div>    
-                                    <div class="card-footer text-center text-bold">Rodapé</div>                                  
-                                </div>
-                            </div> 
-                            
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="br-card hover">
-                                    <div class="card-content">
-                                        <div class="card-content"><img src="https://picsum.photos/200/300?grayscale" alt="Imagem de exemplo"/></div>
-                                    </div> 
-                                    <div class="card-footer text-center text-bold">Rodapé</div>                                     
-                                </div>
-                            </div>                             
-
-                        </div>
-                    </div>                                
-            </section> 
+            </div>  
 
             <section class="mb-5 my-4x" style="background: #d1e3ff no-repeat left bottom; padding: 30px 0">
+
+                <div class="content text-center mb-5x">
+                    <h3>Serviços</h3>
+                </div>            
+
                 <div class="container">
                     <div class="row justify-content-center">
                     
@@ -95,16 +54,104 @@
                     ?>
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="br-card hover">
-                            <div class="card-content">
-                                <div class="card-content"><img src="<?php echo get_template_directory_uri() . '/assets/images/online-test.png'?>" alt="Imagem de exemplo"/></div>
-                            </div>  
-                            <div class="card-footer text-center text-bold">Rodapé</div>                                    
+                            <a href="google.com">
+                                <div class="card-content">
+                                    <div class="card-content"><img src="<?php echo get_template_directory_uri() . '/assets/images/online-test.png'?>" alt="Imagem de exemplo"/></div>
+                                </div>  
+                                <div class="card-footer h5 my-1  text-center text-indigo-cool-vivid-80">Rodapé</div>
+                            </a>
                         </div>
-                    </div> 
+                    </div>   
                     <?php                     
                     } 
+                    ?>   
+                    
+                    <?php
+                    if ( is_active_sidebar('servico-2') ){
                     ?>                    
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="br-card hover">
+                                <div class="card-content">
+                    <?php 
+                        dynamic_sidebar('servico-2');
+                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php 
+                    }else{
+                    ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="br-card hover">
+                            <a href="google.com">
+                                <div class="card-content">
+                                    <div class="card-content"><img src="<?php echo get_template_directory_uri() . '/assets/images/online-test.png'?>" alt="Imagem de exemplo"/></div>
+                                </div>  
+                                <div class="card-footer h5 my-1  text-center text-indigo-cool-vivid-80">Rodapé</div>
+                            </a>
+                        </div>
+                    </div>   
+                    <?php                     
+                    } 
+                    ?>                     
+                    
+                    <?php
+                    if ( is_active_sidebar('servico-3') ){
+                    ?>                    
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="br-card hover">
+                                <div class="card-content">
+                    <?php 
+                        dynamic_sidebar('servico-3');
+                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php 
+                    }else{
+                    ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="br-card hover">
+                            <a href="google.com">
+                                <div class="card-content">
+                                    <div class="card-content"><img src="<?php echo get_template_directory_uri() . '/assets/images/online-test.png'?>" alt="Imagem de exemplo"/></div>
+                                </div>  
+                                <div class="card-footer h5 my-1  text-center text-indigo-cool-vivid-80">Rodapé</div>
+                            </a>
+                        </div>
+                    </div>   
+                    <?php                     
+                    } 
+                    ?> 
 
+                    <?php
+                    if ( is_active_sidebar('servico-4') ){
+                    ?>                    
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="br-card hover">
+                                <div class="card-content">
+                    <?php 
+                        dynamic_sidebar('servico-4');
+                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php 
+                    }else{
+                    ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="br-card hover">
+                            <a href="google.com">
+                                <div class="card-content">
+                                    <div class="card-content"><img src="<?php echo get_template_directory_uri() . '/assets/images/online-test.png'?>" alt="Imagem de exemplo"/></div>
+                                </div>  
+                                <div class="card-footer h5 my-1  text-center text-indigo-cool-vivid-80">Rodapé</div>
+                            </a>
+                        </div>
+                    </div>   
+                    <?php                     
+                    } 
+                    ?>                     
                     </div>
                 </div>
             </section>

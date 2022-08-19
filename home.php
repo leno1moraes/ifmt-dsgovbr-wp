@@ -28,10 +28,10 @@
                 </a> 
             </div>  
 
-            <section class="mb-5 my-4x" style="background: #d1e3ff no-repeat left bottom; padding: 30px 0">
+            <section class="mb-5 my-4x" style="background: #f8f8f8 no-repeat left bottom; padding: 30px 0">
 
                 <div class="content text-center mb-5x">
-                    <h3>Serviços</h3>
+                    <h2 class="text-blue-warm-70 text-bold">Serviços</h2>
                 </div>            
 
                 <div class="container">

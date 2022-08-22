@@ -3,7 +3,146 @@
 
 function ifmtwp_customizer( $wp_customize ){
 
+    /**
+     * Seleciona o tipo de página de redes sociais que aparecerá
+     */
+    $wp_customize->add_section(
+        'sec_text_page_redessociais',
+        array(
+             'title' => 'Página de Redes Sociais',
+             'description' => 'Escolha tipo da página de redes sociais: 1-Padrão ou 2-Modificado'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_page_redessociais',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_page_redessociais',
+            array(
+                'label' => 'Página de Redes Sociais',
+                'section' => 'sec_text_page_redessociais',
+                'type' => 'text'
+            )
+        );     
 
+    /**
+     * Configura e habilita o link das widgets da área Ações e Programas
+     * 1
+     */
+    $wp_customize->add_section(
+        'sec_text_link_acprog1',
+        array(
+             'title' => 'Link Acções e Programas 1',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas 1'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_link_acprog1',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_link_acprog1',
+            array(
+                'label' => 'Link Acções e Programas 1',
+                'section' => 'sec_text_link_acprog1',
+                'type' => 'text'
+            )
+        ); 
+    //2
+    $wp_customize->add_section(
+        'sec_text_link_acprog2',
+        array(
+             'title' => 'Link Acções e Programas 2',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas 2'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_link_acprog2',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_link_acprog2',
+            array(
+                'label' => 'Link e habl. ações e programas 2',
+                'section' => 'sec_text_link_acprog2',
+                'type' => 'text'
+            )
+        );     
+    //3
+    $wp_customize->add_section(
+        'sec_text_link_acprog3',
+        array(
+             'title' => 'Link Acções e Programas 3',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas 3'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_link_acprog3',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_link_acprog3',
+            array(
+                'label' => 'Link e habl. ações e programas 3',
+                'section' => 'sec_text_link_acprog3',
+                'type' => 'text'
+            )
+        );     
+    //4
+    $wp_customize->add_section(
+        'sec_text_link_acprog4',
+        array(
+             'title' => 'Link Acções e Programas 4',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas 4'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_link_acprog4',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_link_acprog4',
+            array(
+                'label' => 'Link e habl. ações e programas 4',
+                'section' => 'sec_text_link_acprog4',
+                'type' => 'text'
+            )
+        );
+
+    /**
+     * Seleciona o tipo de página de lista de notícias que aparecerá
+     */
     $wp_customize->add_section(
         'sec_text_tipo_page_noticias',
         array(

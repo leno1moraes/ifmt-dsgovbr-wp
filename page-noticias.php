@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page Noticias
+Template Name: Page Notícias
  */
 ?>
 
@@ -48,7 +48,8 @@ Template Name: Page Noticias
                 the_content();  
             
             else:
-                echo "A variável tipo de Página de notícias não foi configurada";
+                echo "A variável tipo de página de notícias não foi configurada";
+                
             endif;
             ?>  
 

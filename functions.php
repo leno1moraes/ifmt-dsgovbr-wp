@@ -111,7 +111,57 @@ function ifmtwp_sidebars(){
             'before_title' => '<div class="card-content">',
             'after_title' => '</div>'
         )
-    );     
+    ); 
+    
+    register_sidebar(
+        array(
+            'name' => 'Ações Programas 1',
+            'id' => 'acprog-1',
+            'description' => 'Area de Açõs e Programas (preencher com código html <span> https://www.gov.br/ds/fundamentos-visuais/iconografia)',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );    
+
+    register_sidebar(
+        array(
+            'name' => 'Ações Programas 2',
+            'id' => 'acprog-2',
+            'description' => 'Area de Açõs e Programas (preencher com código html <span> https://www.gov.br/ds/fundamentos-visuais/iconografia)',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );  
+    
+    register_sidebar(
+        array(
+            'name' => 'Ações Programas 3',
+            'id' => 'acprog-3',
+            'description' => 'Area de Açõs e Programas (preencher com código html <span> https://www.gov.br/ds/fundamentos-visuais/iconografia)',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );  
+    
+    register_sidebar(
+        array(
+            'name' => 'Ações Programas 4',
+            'id' => 'acprog-4',
+            'description' => 'Area de Açõs e Programas (preencher com código html <span> https://www.gov.br/ds/fundamentos-visuais/iconografia)',
+            'before_widget' => '<div> ',
+            'after_widget' => '</div>',            
+            'before_title' => '<div class="card-content">',
+            'after_title' => '</div>'
+        )
+    );  
+    
+    
 
 }
 

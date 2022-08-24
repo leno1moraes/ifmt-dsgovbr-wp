@@ -3,6 +3,210 @@
 
 function ifmtwp_customizer( $wp_customize ){
 
+
+
+    /**
+     * Logo para rodapé fundo
+     */
+    // 1
+    $wp_customize->add_section(
+        'sec_media_logo_rodape_fundo',
+        array(
+             'title' => 'Logo do rodapé fundo',
+             'description' => 'Configura logo da imagem do rodapé fundo'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_media_logo_rodape_fundo',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Logo do rodapé fundo',
+                'sanitize_callback' => 'wp_filter_nohtml_kses'
+            )
+        );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_rodape_fundo', 
+                                                                        array(
+                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
+                                                                        'section' => 'sec_media_logo_rodape_fundo',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+
+    // 2
+    $wp_customize->add_section(
+        'sec_link_rodape_fundo',
+        array(
+             'title' => 'Link rodapé para fundo',
+             'description' => 'Configura e habilita o link no rodapé do fundo'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_link_rodape_fundo',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_link_rodape_fundo',
+            array(
+                'label' => 'Configura e habilita o link no rodapé do fundo',
+                'section' => 'sec_link_rodape_fundo',
+                'type' => 'text'
+            )
+        );     
+
+
+    
+    /**
+     * Icones das redes sociais quen ficam no rodapé
+     */
+    // 1
+    $wp_customize->add_section(
+        'sec_link_rodape_facebook',
+        array(
+             'title' => 'Link rodapé para facebook',
+             'description' => 'Configura e habilita o link no rodapé do facebook'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_link_rodape_facebook',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_link_rodape_facebook',
+            array(
+                'label' => 'Configura e habilita o link no rodapé do facebook',
+                'section' => 'sec_link_rodape_facebook',
+                'type' => 'text'
+            )
+        ); 
+    // 2
+    $wp_customize->add_section(
+        'sec_link_rodape_youtube',
+        array(
+             'title' => 'Link rodapé para youtube',
+             'description' => 'Configura e habilita o link no rodapé do youtube'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_link_rodape_youtube',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_link_rodape_youtube',
+            array(
+                'label' => 'Configura e habilita o link no rodapé do youtube',
+                'section' => 'sec_link_rodape_youtube',
+                'type' => 'text'
+            )
+        ); 
+    // 3
+    $wp_customize->add_section(
+        'sec_link_rodape_twitter',
+        array(
+             'title' => 'Link rodapé para twitter',
+             'description' => 'Configura e habilita o link no rodapé do twitter'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_link_rodape_twitter',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_link_rodape_twitter',
+            array(
+                'label' => 'Configura e habilita o link no rodapé do twitter',
+                'section' => 'sec_link_rodape_twitter',
+                'type' => 'text'
+            )
+        );    
+    // 4
+    $wp_customize->add_section(
+        'sec_link_rodape_instagram',
+        array(
+             'title' => 'Link rodapé para instagram',
+             'description' => 'Configura e habilita o link no rodapé do instagram'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_link_rodape_instagram',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_link_rodape_instagram',
+            array(
+                'label' => 'Configura e habilita o link no rodapé do instagram',
+                'section' => 'sec_link_rodape_instagram',
+                'type' => 'text'
+            )
+        );                      
+    /**
+     * (fim) Icones das redes sociais quen ficam no rodapé
+     */
+
+
+    /**
+     * Logo para rodapé
+     */
+    $wp_customize->add_section(
+        'sec_media_logo_rodape',
+        array(
+             'title' => 'Logo do rodapé',
+             'description' => 'Configura logo da imagem do rodapé'
+        )
+    );
+
+        $wp_customize->add_setting(
+            'set_media_logo_rodape',
+            array(
+                'type' => 'theme_mod',
+                'default' => 'Logo do rodapé',
+                'sanitize_callback' => 'wp_filter_nohtml_kses'
+            )
+        );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_rodape', 
+                                                                        array(
+                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
+                                                                        'section' => 'sec_media_logo_rodape',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+
     /**
      * Seleciona o tipo de página de redes sociais que aparecerá
      */

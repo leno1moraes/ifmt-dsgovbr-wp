@@ -27,9 +27,11 @@
                                 if ( get_theme_mod( 'set_media_logo_gov_federal' ) > 0 ) { 
                                     echo '<img src="'.wp_get_attachment_image_url( get_theme_mod( 'set_media_logo_gov_federal' ), 'full').'" alt="logo"/>'; 
                                 } else {
-                                    echo 'Logotipo do Campus';
-                                }                              
-                            ?>                            
+                                ?>
+                                    <img src="<?php echo get_template_directory_uri().'/assets/images/logo-temp.png' ?>" alt="Imagem"/>
+                                <?php
+                                    }                              
+                                ?>                            
 
                             <span class="br-divider vertical mx-half mx-sm-1"></span>
                                                         
@@ -39,11 +41,10 @@
                                         the_custom_logo();
                                     }else{
                                 ?>
-                                    Logotipo do Campus
+                                    <img src="<?php echo get_template_directory_uri().'/assets/images/logo-temp.png' ?>" alt="Imagem"/>
                                 <?php
-                                
-                                    }
-                                ?>
+                                    }                              
+                                ?>  
                             </div>
                         </div>
 

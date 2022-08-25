@@ -243,9 +243,7 @@ add_action('after_setup_theme', 'ifmtwp_load_config', 0);
  */
 
 function clear_nav_menu_rodape_item_id($id, $item, $args) {
-    if($args->theme_location == 'ifmt_wp_footer_menu'):
-        return "";
-    endif;
+        return "";    
 }
 add_filter('nav_menu_item_id', 'clear_nav_menu_rodape_item_id', 10, 3);
 
@@ -262,13 +260,14 @@ add_filter('nav_menu_item_id', 'clear_nav_menu_rodape_item_id', 10, 3);
  */
 
 function clear_nav_menu_rodape_item_class($classes, $item, $args) {
-    if($args->theme_location == 'ifmt_wp_footer_menu'):
-        $classes[] = 'teste';
-        return array();
-    endif;
+    return array();
 }
 add_filter('nav_menu_css_class', 'clear_nav_menu_rodape_item_class', 10, 3);
+
 //clear_nav_menu_item_class
+
+
+
 
 /**
  * remove a class das ul
@@ -312,9 +311,12 @@ add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
  */
 /*
 function add_menu_list_item_class($classes, $item, $args) {
-    if (property_exists($args, 'list_item_class')) {
-        $classes[] = $args->list_item_class;
-    }
+    if($args->theme_location == 'ifmt_wp_main_menu'):
+        if (property_exists($args, 'list_item_class')) {
+            $classes[] = $args->list_item_class;
+        }
+    endif;
+
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
@@ -345,7 +347,9 @@ add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
  */
 /*
 function clear_nav_menu_item_class($classes, $item, $args) {
-    return array();
+    if($args->theme_location == 'ifmt_wp_main_menu'):
+        return $classes;
+    endif;
 }
 add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);
 */

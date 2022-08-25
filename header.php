@@ -303,6 +303,7 @@
                                     
                                     <nav class="menu-body">
                                         <?php
+                                        /*
                                             wp_nav_menu( array(
                                                 'theme_location' => 'ifmt_wp_main_menu',
                                                 'container'       => '',
@@ -312,7 +313,11 @@
                                                 'link_after'      => '</span>',
                                                 'link_class'      => 'menu-item'                                                  
                                             ) );
+                                        */                                        
                                         ?>
+
+                                        <?php get_template_part('parts/menu-cabecario'); ?>  
+                                        
                                     </nav>
                                     
                                 </div><!-- menu-panel -->

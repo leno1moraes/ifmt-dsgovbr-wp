@@ -302,22 +302,7 @@
                                     </div><!-- menu-header -->
                                     
                                     <nav class="menu-body">
-                                        <?php
-                                        /*
-                                            wp_nav_menu( array(
-                                                'theme_location' => 'ifmt_wp_main_menu',
-                                                'container'       => '',
-                                                'container_class' => '',
-                                                'items_wrap'      => '<ul class="">%3$s</ul>',
-                                                'link_before'     => '<span class="content">',                          
-                                                'link_after'      => '</span>',
-                                                'link_class'      => 'menu-item'                                                  
-                                            ) );
-                                        */                                        
-                                        ?>
-
-                                        <?php get_template_part('parts/menu-cabecario'); ?>  
-                                        
+                                        <?php get_template_part('parts/menu-cabecario'); ?>
                                     </nav>
                                     
                                 </div><!-- menu-panel -->

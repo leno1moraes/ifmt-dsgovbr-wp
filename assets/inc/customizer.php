@@ -4,6 +4,61 @@
 function ifmtwp_customizer( $wp_customize ){
 
 
+    /**
+     * Texto de rodapé
+     */
+    //1
+    $wp_customize->add_section(
+        'sec_text_rodape_normal',
+        array(
+             'title' => 'Texto de rodapé normal',
+             'description' => 'Preencher com o texto de rodapé (normal)'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_rodape_normal',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_rodape_normal',
+            array(
+                'label' => 'Preencher com o texto de rodapé (normal)',
+                'section' => 'sec_text_rodape_normal',
+                'type' => 'text'
+            )
+        );
+    //2
+    $wp_customize->add_section(
+        'sec_text_rodape_negrito',
+        array(
+             'title' => 'Texto de rodapé negrito',
+             'description' => 'Preencher com o texto de rodapé (negrito)'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_rodape_negrito',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_rodape_negrito',
+            array(
+                'label' => 'Preencher com o texto de rodapé (negrito)',
+                'section' => 'sec_text_rodape_negrito',
+                'type' => 'text'
+            )
+        );         
 
     /**
      * Logo para rodapé fundo

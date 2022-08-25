@@ -203,7 +203,7 @@ function ifmtwp_load_config(){
     register_nav_menus(
         array(
             'ifmt_wp_main_menu' => 'Menu Principal',
-            'ifmt_wp_footer_menu' => 'Menu Secundario'
+            'ifmt_wp_footer_menu' => 'Menu Rodapé'
         )
     );
 
@@ -233,17 +233,85 @@ add_action('after_setup_theme', 'ifmtwp_load_config', 0);
 
 
 /**
+ * RODAPE
+ * remove a id das li
+ *
+ * @param [type] $id
+ * @param [type] $item
+ * @param [type] $args
+ * @return void
+ */
+function clear_nav_menu_rodape_item_id($id, $item, $args) {
+    if($args->theme_location == 'ifmt_wp_footer_menu'):
+        return "";
+    endif;
+}
+add_filter('nav_menu_item_id', 'clear_nav_menu_rodape_item_id', 10, 3);
+//clear_nav_menu_item_id
+
+/**
+ * RODAPE
+ * remove a class das li
+ *
+ * @param [type] $classes
+ * @param [type] $item
+ * @param [type] $args
+ * @return void
+ */
+
+function clear_nav_menu_rodape_item_class($classes, $item, $args) {
+    if($args->theme_location == 'ifmt_wp_footer_menu'):
+        return array();
+    endif;
+}
+add_filter('nav_menu_css_class', 'clear_nav_menu_rodape_item_class', 10, 3);
+
+//clear_nav_menu_item_class
+
+
+/**
+ * RODAPE
+ * Substituir as li e ul por DIV 
+ *
+ * @param [type] $menu
+ * @return void
+ */
+/*
+function replace_li_ul_rodape_submenu_class($menu) {
+
+    if($menu->theme_location == 'ifmt_wp_footer_menu'):
+    
+        $menu = preg_replace('/<li>/ ','<div>',$menu);
+        $menu = preg_replace('/<\/li>/','</div>',$menu);
+
+        $menu = preg_replace('/<ul>/ ','<div>',$menu);
+        $menu = preg_replace('/<\/ul>/','</div>',$menu);
+    
+    endif;
+    
+
+    return $menu;      
+}
+add_filter('wp_nav_menu_objects','replace_li_ul_rodape_submenu_class');
+*/
+//replace_li_submenu_class 
+
+
+
+
+/**
  * remove a class das ul
  *
  * @param [type] $menu
  * @return void
  */
+/*
 function new_submenu_class($menu) {    
     $menu = preg_replace('/ class="sub-menu"/',' class=""',$menu);        
     return $menu;      
 }
 add_filter('wp_nav_menu','new_submenu_class'); 
-
+*/
 
 /**
  * adiciona class nos <a href=''/>
@@ -253,6 +321,7 @@ add_filter('wp_nav_menu','new_submenu_class');
  * @param [type] $args
  * @return void
  */
+/*
 function add_menu_link_class( $atts, $item, $args ) {
     if (property_exists($args, 'link_class')) {
       $atts['class'] = $args->link_class;
@@ -260,7 +329,7 @@ function add_menu_link_class( $atts, $item, $args ) {
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
-
+*/
 
 /**
  * adiciona class nos <a href=''/>
@@ -270,6 +339,7 @@ add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
  * @param [type] $args
  * @return void
  */
+/*
 function add_menu_list_item_class($classes, $item, $args) {
     if (property_exists($args, 'list_item_class')) {
         $classes[] = $args->list_item_class;
@@ -277,6 +347,7 @@ function add_menu_list_item_class($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
+*/
 
 /**
  * remove a id das li
@@ -286,10 +357,12 @@ add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
  * @param [type] $args
  * @return void
  */
+/*
 function clear_nav_menu_item_id($id, $item, $args) {
     return "";
 }
 add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
+*/
 
 /**
  * remove a class das li
@@ -299,11 +372,12 @@ add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
  * @param [type] $args
  * @return void
  */
+/*
 function clear_nav_menu_item_class($classes, $item, $args) {
     return array();
 }
 add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);
-
+*/
 
 /**
  * Estilização dos menus 
@@ -311,12 +385,14 @@ add_filter('nav_menu_css_class', 'clear_nav_menu_item_class', 10, 3);
  * @param [type] $menu
  * @return void
  */
+/*
 function replace_li_submenu_class($menu) {
     $menu = preg_replace('/<li>/ ','<li> <div class="menu-folder">',$menu);
     $menu = preg_replace('/<\/li>/','</div>',$menu);
     return $menu;      
 }
 add_filter('wp_nav_menu','replace_li_submenu_class'); 
+*/
 
 /**
  * Caso não exista a tag wp_body_open, essa função o adiciona

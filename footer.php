@@ -18,85 +18,10 @@
 
                 <div class="br-list horizontal" data-toggle="data-toggle" data-sub="data-sub">
                     
-                    <?php get_template_part('parts/menu-rodape'); ?>
-
-                    <!--
-                    <div class="col-2">
-                        <a class="br-item header" href="javascript:void(0)">
-
-                            <div class="content text-down-01 text-bold text-uppercase">Categoria 1</div>
-
-                            <div class="support">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </div>
-                        </a>
-
-                        <div class="br-list">
-                            <span class="br-divider d-md-none"></span>
-                            <a class="br-item" href="javascript:void(0)">
-                            <div class="content">Ad deserunt nostrud</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Nulla occaecat eiusmod</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Nulla occaecat eiusmod</div></a><span class="br-divider d-md-none"></span>
-                        </div>
-
-                    </div>
-
-                    <div class="col-2"><a class="br-item header" href="javascript:void(0)">
-                        <div class="content text-down-01 text-bold text-uppercase">Categoria 2</div>
-                        <div class="support"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </div></a>
-                        <div class="br-list"><span class="br-divider d-md-none"></span><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Ex qui laborum consectetur aute commodo</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Duis incididunt consectetur</div></a><span class="br-divider d-md-none"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-2"><a class="br-item header" href="javascript:void(0)">
-                        <div class="content text-down-01 text-bold text-uppercase">Categoria 3</div>
-                        <div class="support"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </div></a>
-                        <div class="br-list"><span class="br-divider d-md-none"></span><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Duis incididunt consectetur</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Adipisicing culpa et ad consequat</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Nulla occaecat eiusmod</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Duis incididunt consectetur</div></a><span class="br-divider d-md-none"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-2"><a class="br-item header" href="javascript:void(0)">
-                        <div class="content text-down-01 text-bold text-uppercase">Categoria 4</div>
-                        <div class="support"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </div></a>
-                        <div class="br-list"><span class="br-divider d-md-none"></span><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Duis incididunt consectetur</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Qui esse</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Duis incididunt consectetur</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Duis incididunt consectetur</div></a><span class="br-divider d-md-none"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-2"><a class="br-item header" href="javascript:void(0)">
-                        <div class="content text-down-01 text-bold text-uppercase">Categoria 5</div>
-                        <div class="support"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </div></a>
-                        <div class="br-list"><span class="br-divider d-md-none"></span><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Ad deserunt nostrud</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Adipisicing culpa et ad consequat</div></a><span class="br-divider d-md-none"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-2"><a class="br-item header" href="javascript:void(0)">
-                        <div class="content text-down-01 text-bold text-uppercase">Categoria 6</div>
-                        <div class="support"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </div></a>
-                        <div class="br-list"><span class="br-divider d-md-none"></span><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Adipisicing culpa et ad consequat</div></a><a class="br-item" href="javascript:void(0)">
-                            <div class="content">Qui esse</div></a><span class="br-divider d-md-none"></span>
-                        </div>
-                    </div>
-                    -->
+                    <?php get_template_part('parts/menu-rodape'); ?>                
 
                 </div>
+                
                 <div class="d-none d-sm-block">
                 <div class="row align-items-end justify-content-between py-5">
                     <div class="col social-network">

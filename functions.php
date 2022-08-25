@@ -241,12 +241,14 @@ add_action('after_setup_theme', 'ifmtwp_load_config', 0);
  * @param [type] $args
  * @return void
  */
+
 function clear_nav_menu_rodape_item_id($id, $item, $args) {
     if($args->theme_location == 'ifmt_wp_footer_menu'):
         return "";
     endif;
 }
 add_filter('nav_menu_item_id', 'clear_nav_menu_rodape_item_id', 10, 3);
+
 //clear_nav_menu_item_id
 
 /**
@@ -261,43 +263,12 @@ add_filter('nav_menu_item_id', 'clear_nav_menu_rodape_item_id', 10, 3);
 
 function clear_nav_menu_rodape_item_class($classes, $item, $args) {
     if($args->theme_location == 'ifmt_wp_footer_menu'):
+        $classes[] = 'teste';
         return array();
     endif;
 }
 add_filter('nav_menu_css_class', 'clear_nav_menu_rodape_item_class', 10, 3);
-
 //clear_nav_menu_item_class
-
-
-/**
- * RODAPE
- * Substituir as li e ul por DIV 
- *
- * @param [type] $menu
- * @return void
- */
-/*
-function replace_li_ul_rodape_submenu_class($menu) {
-
-    if($menu->theme_location == 'ifmt_wp_footer_menu'):
-    
-        $menu = preg_replace('/<li>/ ','<div>',$menu);
-        $menu = preg_replace('/<\/li>/','</div>',$menu);
-
-        $menu = preg_replace('/<ul>/ ','<div>',$menu);
-        $menu = preg_replace('/<\/ul>/','</div>',$menu);
-    
-    endif;
-    
-
-    return $menu;      
-}
-add_filter('wp_nav_menu_objects','replace_li_ul_rodape_submenu_class');
-*/
-//replace_li_submenu_class 
-
-
-
 
 /**
  * remove a class das ul

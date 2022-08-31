@@ -179,7 +179,7 @@
 
   .carousel-wrapper {
       margin: 0;
-      background: #000000; }
+      background: #000000;}
       @media (min-width: 1150px) {
         .carousel-wrapper {
           min-height: 680px; } }
@@ -190,6 +190,7 @@
     @media (min-width: 320px) and (max-width: 1150px) {
       .carousel-wrapper {
         min-height: 40vh; } }
+        
       .carousel-wrapper #jumbotron-carousel {
         margin-bottom: 0; }
         .carousel-wrapper #jumbotron-carousel .carousel-control-next,
@@ -261,8 +262,8 @@
           .carousel-wrapper #jumbotron-carousel .carousel-item:before {
             content: " ";
             background-color: transparent;
-            background-image: -o-radial-gradient(transparent, #000);
-            background-image: radial-gradient(transparent, #000);
+            /*background-image: -o-radial-gradient(transparent, #000);
+            background-image: radial-gradient(transparent, #000);*/
             white-space: nowrap;
             display: block;
             position: absolute;

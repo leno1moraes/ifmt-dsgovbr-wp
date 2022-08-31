@@ -21,7 +21,6 @@
                     <?php get_template_part('parts/menu-rodape'); ?>                
 
                 </div>
-                
                 <div class="d-none d-sm-block">
                 <div class="row align-items-end justify-content-between py-5">
                     <div class="col social-network">

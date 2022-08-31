@@ -1,17 +1,15 @@
 
-
 <?php get_header(); ?>
 
 <!-- content body -->
 
+<!-- parametrizar todo espaço da pagina-->
+<!-- <main class="d-flex flex-fill mb-5 my-0" id="main"> -->
 
-
-
-
-<main class="d-flex flex-fill mb-5 my-0" id="main">
-    <div class="container align-content-center my-0">
-        <div>                      
-      
+<main class=" mb-5 my-0" id="main">
+    <div class="align-content-center my-0">
+                             
+        <div>
             <?php if ( get_theme_mod( 'set_text_tipo_carousel', '') == '1'): ?>
                 <section>
                     <?php get_template_part('parts/govbr-carousel'); ?>
@@ -27,7 +25,8 @@
                     Mais notícias
                 </a> 
             </div>  
-            
+        </div>  
+        
             <div>
                 <!-- área de serviços -->
                 <?php get_template_part('parts/area-servicos'); ?>
@@ -43,7 +42,7 @@
                 <?php get_template_part('page-redessociais'); ?>
             </div>
 
-        </div>        
+                
     </div>   
 </main>
 

@@ -6,7 +6,7 @@
 <!-- parametrizar todo espaço da pagina-->
 <!-- <main class="d-flex flex-fill mb-5 my-0" id="main"> -->
 
-<main class=" mb-5 my-0" id="main">
+<main class="mb-5 my-0" id="main">
     <div class="align-content-center my-0">
                              
         <div>
@@ -19,13 +19,13 @@
                     <?php get_template_part('parts/jumbotron-carousel'); ?>
                 </section>      
             <?php endif; ?>  
-
+        </div> 
             <div class="mt-6 text-center">        
                 <a class="br-button secondary large mt-3 mt-sm-0 ml-sm-3 state-published" href="<?php echo home_url( '/noticias' ); ?>">
                     Mais notícias
                 </a> 
             </div>  
-        </div>  
+         
         
             <div>
                 <!-- área de serviços -->

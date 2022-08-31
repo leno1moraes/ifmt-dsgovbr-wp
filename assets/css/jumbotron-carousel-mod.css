@@ -179,10 +179,14 @@
 
   .carousel-wrapper {
       margin: 0;
-      background: #000000;}
+      background: #000000;
+      
+    }
       @media (min-width: 1150px) {
         .carousel-wrapper {
-          min-height: 680px; } }
+          /*min-height: 680px;*/ 
+          min-height: 70vh;
+        } }
     
 /*ATE AQUI 1*/        
 
@@ -206,14 +210,16 @@
             .carousel-wrapper #jumbotron-carousel .carousel-indicators li.active {
               background-color: white; }
         .carousel-wrapper #jumbotron-carousel .carousel-item {
-          max-height: 680px; }
+          /*max-height: 680px;*/ 
+          max-height: 70vh;}
     
     @media (min-width: 320px) and (max-width: 1150px) {
       .carousel-wrapper #jumbotron-carousel .carousel-item {
         max-height: 400px; } }
           .carousel-wrapper #jumbotron-carousel .carousel-item img {
             display: block;
-            height: 680px;
+            /*height: 680px;*/
+            height: 70vh;
             object-fit: cover; }
     
     @media (min-width: 320px) and (max-width: 1150px) {

@@ -16,14 +16,16 @@
 	     data-interval="5000">
 		<div class="carousel-inner">
 			<?php while ( $feature_news_query->have_posts() ) : $feature_news_query->the_post(); ?>
-				<div class="carousel-item <?php echo $i == 0 ? 'active' : ''; ?>">							
+				<div class="carousel-item <?php echo $i == 0 ? 'active' : ''; ?>">
+											
 					<?php
 					if ( has_post_thumbnail() ) {
 						$post_thumb = get_the_post_thumbnail_url( get_the_ID(), 'carousel-feature' );
 					} else {
 						$post_thumb = get_template_directory_uri() . '/assets/images/teste-personagem.jpg';
 					}
-					?>						
+					?>	
+							
 					<a href="<?php the_permalink(); ?>">
 					<img class="d-block w-100" src="<?php echo $post_thumb; ?>" alt="Second slide">	
 					</a>

@@ -3,6 +3,35 @@
 
 function ifmtwp_customizer( $wp_customize ){
 
+    /**
+     * Componentes em tela "full size"
+     */
+    $wp_customize->add_section(
+        'sec_text_full_size',
+        array(
+             'title' => 'Componentes Full Size',
+             'description' => 'Permite os componentes ocuparem a tela toda (1-toda tela ou 2-encaixar na tela)'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_full_size',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_full_size',
+            array(
+                'label' => 'Componentes Full Size',
+                'section' => 'sec_text_full_size',
+                'type' => 'text'
+            )
+        );
+
 
     /**
      * Texto de rodapé

@@ -20,7 +20,7 @@ Template Name: Page Redes Sociais
 
                 elseif ( get_theme_mod( 'set_text_page_redessociais') == '2' ):
             ?>
-                <p>Ola mundo</p>
+                <p>Conteúdo próprio das redes sociais</p>
             <?php 
             else:
                 echo "A variável tipo de página de redes sociais não foi configurada";

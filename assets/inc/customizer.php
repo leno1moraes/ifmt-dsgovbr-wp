@@ -3,6 +3,36 @@
 
 function ifmtwp_customizer( $wp_customize ){
 
+
+    /**
+     * Habilita o bloco de notícias com conteúdo do wordpress ou implementando
+     */
+    $wp_customize->add_section(
+        'sec_text_page_blocodenoticias',
+        array(
+             'title' => 'Habilita o bloco de notícias',
+             'description' => 'Habilita o Bloco de Notícias (1-página feita pelo usuário ou 2-página desenvolvida)'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_page_blocodenoticias',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_page_blocodenoticias',
+            array(
+                'label' => 'Habilita o bloco de notícias',
+                'section' => 'sec_text_page_blocodenoticias',
+                'type' => 'text'
+            )
+        );
+    
     /**
      * Componentes em tela "full size"
      */

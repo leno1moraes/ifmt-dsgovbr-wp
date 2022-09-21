@@ -260,6 +260,15 @@ function clear_nav_menu_rodape_item_class($classes, $item, $args) {
 add_filter('nav_menu_css_class', 'clear_nav_menu_rodape_item_class', 10, 3);
 
 /**
+ * Retira definitivamente o atributo lazy das imagens
+ */
+function take_off_teste( $attr ){
+    unset( $attr['loading'] );
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'take_off_teste');
+
+/**
  * Caso não exista a tag wp_body_open, essa função o adiciona
  */
 if ( ! function_exists( 'wp_body_open' ) ){
@@ -267,3 +276,4 @@ if ( ! function_exists( 'wp_body_open' ) ){
         do_action( 'wp_body_open' );
     }
 }
+

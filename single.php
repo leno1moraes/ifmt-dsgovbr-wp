@@ -1,46 +1,46 @@
-
-
-<?php get_header(); ?>
-
-<!-- 
-    Template das noticias
--->
+<?php 
+/**
+ * Template para mostrar os posts da notícia
+ */
+get_header(); 
+?>
 
 <!-- content body -->
-<main class="d-flex flex-fill mb-5" id="main">
-    <div class="container-lg d-flex">
-        <div class="row">
-            <div class="col mb-5">
-                <div class="main-content pl-sm-3 mt-4" id="main-content">
-                    
-                    <?php
-                        while (have_posts()) :
-                            the_post();
-                    ?>
-                        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-                            <h2><?php the_title(); ?></h2>                                                      
-                            <div>
-                                <p>Postado em <?php echo get_the_date(); ?> por <?php the_author_posts_link(); ?></p>
-                                <p>Categorias: <?php the_category(); ?> </p>
-                                <p>Tags: <?php the_tags('', ', '); ?> </p>
-                            </div>
-                            <?php the_post_thumbnail( 'full' ); ?>  
-                            <?php the_content(); 
-                            ?>
-                        </article>
-                    <?php
-                        endwhile;
+    <main id="main-single" class="site-main <?php echo is_singular('multimedia') ? 'multimedia-content' : ''; ?>">
+		<div class="container">
+            
+            <!-- ERROR
+			<div class="row">
+				<?php //the_breadcrumb(); ?>
+			</div>
+            -->
 
-                        if ( comments_open() || get_comments_number() ){
-                            comments_template();
-                        }
-                    ?>
+			<div class="row" id="content">
+				<div class="col-12 pt-4 pb-4">
+					<?php while (have_posts()) : the_post(); ?>
+
+						<?php if( $post_subtitle = get_post_meta( $post->ID, '_post_subtitle', true ) ): ?>
+							<span class="alternative-headline text-center d-block mb-3 text-uppercase"><?php echo $post_subtitle?></span>
+						<?php endif; ?>
+
+						<?php get_template_part('parts/content-noticia', get_post_type()); ?>
+
+					<?php endwhile; ?>
                     
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+                    <!--
+					<div class="entry-content">
+						<?php /*get_template_part('template-parts/copyright');*/ ?>
+					</div>
+                    -->
+				</div>
+			</div>
+		</div>
+
+		<?php // if (comments_open() || get_comments_number()) : ?>
+			<?php // comments_template( '', true ); ?>
+		<?php // endif; ?>
+
+	</main>
 <!-- content body -->
 
 <?php get_footer(); ?>

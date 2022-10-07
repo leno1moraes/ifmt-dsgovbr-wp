@@ -19,6 +19,9 @@ function ifmtwp_load_scripts(){
     //Design System de Governo
     wp_enqueue_style('ifmtwp-css-govbr', get_template_directory_uri().'/assets/node_modules/@govbr-ds/core/dist/core.css', 'all');
 
+    //Design System Proprio
+    wp_enqueue_style( 'estilos-proprios-style', get_template_directory_uri() . '/assets/css/estilos-proprios.css');    
+
     //Fontawesome
     wp_enqueue_style('ifmtwp-Fontawesome','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
         

@@ -42,5 +42,5 @@ get_header();
 
 	</main>
 <!-- content body -->
-
+ 
 <?php get_footer(); ?>

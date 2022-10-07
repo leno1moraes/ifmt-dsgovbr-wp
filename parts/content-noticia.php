@@ -63,8 +63,4 @@
 		<span> <?php the_tags('', ', ') ?> </span>		
 	</div>
 
-	<footer class="entry-footer">
-		<?php //idg_wp_entry_footer(); ?>
-	</footer>
-
 </article>

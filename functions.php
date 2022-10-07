@@ -189,7 +189,7 @@ function the_slider() {
     require get_template_directory() . '/template-slider.php';
 }
 
-
+ 
 /**
  * Carregamentos das configurações do wordpress:
  * 1 - adiciona os menus

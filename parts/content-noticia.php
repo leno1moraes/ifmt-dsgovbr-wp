@@ -12,7 +12,7 @@
 
 		<?php if ( has_excerpt( $id ) ) : ?>
 			<span class="documentDescription"><?php the_excerpt(); ?></span>
-		<?php endif; ?>
+		<?php endif; ?>				
 
         <div class="my-6">
 			<span class="br-divider my-3"></span>
@@ -24,10 +24,12 @@
 					
 					<span class="br-divider ml-auto"></span>
                 	<div class="text–font-weight-medium tex-font-size-scale-up-02">Compartilhe: 
-						<span class="fab fa-facebook fa-x text-blue-warm-vivid-80"></span> 
-						<span class="fab fa-twitter fa-1x text-blue-warm-vivid-80"></span>
-						<span class="fab fa-instagram fa-1x text-blue-warm-vivid-80"></span>
-						<span class="fas fa-link text-blue-warm-vivid-80"></span>
+
+						<a class="fab fa-facebook fa-1x text-blue-warm-vivid-80" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo str_replace('http', 'https', get_permalink()); ?>"></a> 
+
+						<a class="fab fa-whatsapp fa-1x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http', 'https', get_permalink()); ?>"></a>
+
+						<a class="fab fa-twitter fa-1x text-blue-warm-vivid-80" target="_blank" href="https://twitter.com/home?status=<?php echo str_replace('http', 'https', get_permalink()); ?>"></a>
 					</div> 	
 
 				</div>
@@ -46,13 +48,19 @@
 	</div>
 
 	<div class="text-left my-6">
-		<span class="text-bold">Por <?php the_author(); ?> </span>
+		<span class="text-bold text-gray-70">Por <?php the_author(); ?> </span>
 		
 		<span class="br-divider vertical my-4"></span>
 		
-		<span class="text-bold">Categoria</span>
+		<span class="text-bold text-gray-70">Categoria</span>
 		<span class="br-divider vertical my-2"></span>
-		<span> <?php the_category(' - ')?> </span>
+		<span class="link-category"> <?php the_category(' - ')?> </span>
+
+		<span class="br-divider vertical my-4"></span>
+		
+		<span class="text-bold text-gray-70">Tags</span>
+		<span class="br-divider vertical my-2"></span>
+		<span> <?php the_tags('', ', ') ?> </span>		
 	</div>
 
 	<footer class="entry-footer">

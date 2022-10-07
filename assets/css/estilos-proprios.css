@@ -25,3 +25,10 @@ div.entry-content p:first-child:first-letter {
     line-height: 2rem;
     margin-right: 8px;   
 }
+
+a.link-category:link{
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #2670e8;
+    line-height: 1.5;    
+}

@@ -14,10 +14,13 @@ Template Name: Page Notícias
 
             <?php
             if ( get_theme_mod( 'set_text_page_noticias') == '1' ):
-            
+                
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 5
+                    'posts_per_page' => 5,
+                    'paged'=>$paged
                 );
 
                 $news_query = new WP_Query( $args );
@@ -27,8 +30,7 @@ Template Name: Page Notícias
                 <h1 class="documentFirstHeading">Últimas Notícias</h1>
             <?php
 
-                    while ($news_query->have_posts()) :
-                        $news_query->the_post();
+                    while ( $news_query->have_posts() ) : $news_query->the_post();
             ?>
 
             <span class="br-divider my-3"></span>
@@ -73,11 +75,10 @@ Template Name: Page Notícias
             <div class="my-6x text-center">
 
             <?php                
-                    
-                next_posts_link( 'Antigos', $news_query->max_num_pages );
-                previous_posts_link( 'Recentes &raquo;' ); 
-                
-                
+                //echo $paged.'<br>';
+                previous_posts_link( "<< Recentes" ); 
+                next_posts_link( "Antigos >>", $news_query->max_num_pages );
+                                
             ?>
 
             </div>

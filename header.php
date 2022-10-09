@@ -106,6 +106,7 @@
                                         <div class="title">Funcionalidades do Sistema</div>
                                     </div>
 
+                                    <!--
                                     <div class="align-items-center br-item">
                                         <button class="br-button circle small" type="button" aria-label="Funcionalidade 1"><i class="fas fa-chart-bar" aria-hidden="true"></i><span class="text">Funcionalidade 1</span>
                                         </button>
@@ -120,7 +121,8 @@
                                         <button class="br-button circle small" type="button" aria-label="Funcionalidade 3"><i class="fas fa-comment" aria-hidden="true"></i><span class="text">Funcionalidade 3</span>
                                         </button>
                                     </div>
-
+                                    -->
+                                    
                                     <div class="align-items-center br-item">
                                         <button class="br-button circle small" type="button" aria-label="Funcionalidade 4"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Funcionalidade 4</span>
                                         </button>

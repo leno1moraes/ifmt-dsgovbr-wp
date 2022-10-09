@@ -33,3 +33,10 @@ a.link-category:link{
     line-height: 1.5;  
       
 }
+
+h4.tileHeadline{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0c326f;
+    line-height: 2.2rem;    
+}

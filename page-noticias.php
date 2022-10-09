@@ -16,32 +16,79 @@ Template Name: Page Notícias
             if ( get_theme_mod( 'set_text_page_noticias') == '1' ):
             
                 $args = array(
+                    'post_type' => 'post',
                     'posts_per_page' => 5
                 );
 
                 $news_query = new WP_Query( $args );
 
                 if ( $news_query->have_posts() ):
+            ?>
+                <h1 class="documentFirstHeading">Últimas Notícias</h1>
+            <?php
+
                     while ($news_query->have_posts()) :
                         $news_query->the_post();
-                ?>
-                    <article>
-                        <a href="<?php the_permalink(); ?>" style="text-decoration: none;" ><h3><?php the_title(); ?></h3></a>
-                        <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( 'medium', array( 'loading' => '' ) ); ?> </a>
+            ?>
+
+            <span class="br-divider my-3"></span>
+
+            <article>            
+                <div class="row">
+                    <div class="col">
+
+                        <a href="<?php the_permalink(); ?>"> <h4 class="tileHeadline"> <?php the_title(); ?> </h4> </a>
+
+                        <?php if ( has_excerpt( $id ) ) : ?>
+                            <span class="documentDescription"><?php the_excerpt(); ?></span>
+                        <?php endif; ?>	                
+                        
                         <div>
-                            <p>Postado em <?php echo get_the_date(); ?> por <?php the_author_posts_link(); ?></p>
+                            <span class="text-bold text-gray-70">Categoria: </span>
+                            <span class="link-category"> <?php the_category(' - ')?> </span>
                         </div>
-                        <?php the_excerpt(); 
-                        ?>
-                    </article>
-                <?php
+
+                        <div>
+                            <span class="text-bold text-gray-70">Tags: </span>
+                            <span> <?php the_tags('', ', ') ?> </span>	
+                        </div>
+
+                        <div>
+                            <span class="text-bold text-gray-70">Publicação: </span>
+                            <span> <?php echo get_the_date('d/m/Y').' '.get_the_time('H').'h'.get_the_time('i'); ?> </span>	
+                        </div>                        
+                    </div>
+
+                    <div class="col-auto">
+                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                    </div>
+                </div>                
+            </article>                            
+
+            <?php
                     endwhile;
-                    echo 'paginação';
-                    the_posts_pagination();    
+                    
+            ?>
+
+            <div class="my-6x text-center">
+
+            <?php                
+                    
+                next_posts_link( 'Antigos', $news_query->max_num_pages );
+                previous_posts_link( 'Recentes &raquo;' ); 
+                
+                
+            ?>
+
+            </div>
+
+            <?php 
+                wp_reset_postdata();
+
                 else:
-                ?>
+            ?>
                     <p>Não há posts</p>
-                <?php
+            <?php
                 endif;
                             
             elseif ( get_theme_mod( 'set_text_page_noticias') == '2' ):

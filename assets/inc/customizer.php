@@ -465,7 +465,7 @@ function ifmtwp_customizer( $wp_customize ){
         'sec_text_tipo_page_noticias',
         array(
              'title' => 'Página de notícias',
-             'description' => 'Escolha tipo da página de notícias: 1-Padrão ou 2-Modificado'
+             'description' => 'Escolha tipo da página de notícias: 1-Padrão do sistema ou 2-Personalizado pelo usuário'
         )
     );
     
@@ -494,7 +494,7 @@ function ifmtwp_customizer( $wp_customize ){
         'sec_text_tipo_carousel',
         array(
              'title' => 'Tipo de carousel',
-             'description' => 'Escolha tipo de carousel: 1-Padrão ou 2-Modificado'
+             'description' => 'Escolha tipo da página de notícias: 1-Padrão do sistema ou 2-Personalizado pelo usuário'
         )
     );
     

@@ -11,37 +11,57 @@ Template Name: General Template
 -->
 
 <!-- content body -->
-<main class="d-flex flex-fill mb-5" id="main">
-<div class="container-lg d-flex">
+<main id="main-single" class="site-main <?php echo is_singular('multimedia') ? 'multimedia-content' : ''; ?>">
 
-<div class="row">
+    <div class="container">
 
-    <div class="col mb-5">  
-                    <?php            
-                        while (have_posts()) :                                                    
-                            the_post();
-                    ?>
-                        <article>
-                            <a href="<?php the_permalink(); ?>" style="text-decoration: none;" ><h3><?php the_title(); ?></h3></a>
-                            <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( 'medium', array( 'loading' => '' ) ); ?> </a>
-                            <div>
-                                <p>Postado em <?php echo get_the_date(); ?> por <?php the_author_posts_link(); ?></p>
-                            </div>
+        <div class="row" id="content">
+
+            <div class="col-12 pt-4 pb-4">
+
+                <?php 
+                    while (have_posts()) : the_post(); ?>
+
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+
+                        <header class="entry-header">
+                            <?php the_title( '<h1 class="documentFirstHeading">', '</h1>' ); ?>
+
+                            <div class="my-1">
+                                <span class="br-divider my-3"></span>
+                                    <div class="d-flex">
+                                        <div>Publicado: <?php the_date('d/m/Y'); ?> <?php the_time('H'); ?>h<?php the_time('i'); ?></div>
+                                        <span class="br-divider vertical mx-3"></span>
+                                        <div>Atualizado em: <?php the_modified_date('d/m/Y'); ?> <?php the_modified_time('H'); ?>h<?php the_modified_time('i'); ?></div>	
+                                        
+                                        <span class="br-divider ml-auto"></span>
+                                        <div class="text–font-weight-medium tex-font-size-scale-up-02">Compartilhe: 
+
+                                            <a class="fab fa-facebook fa-1x text-blue-warm-vivid-80" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a> 
+                                            <a class="fab fa-whatsapp fa-1x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
+                                            <a class="fab fa-twitter fa-1x text-blue-warm-vivid-80" target="_blank" href="https://twitter.com/home?status=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
+                                        </div> 	
+                                    </div>
+                                <span class="br-divider my-3"></span>
+                            </div>                      
+                        </header>
+
+                        <div class="my-6">        
                             <?php the_content(); ?>
-                        </article>
-                    <?php
-                        endwhile;
+                        </div>
+                    </article>
 
-                        the_posts_pagination(array(
-                        ));
-
-                    
-                    ?>
+                <?php
+                    endwhile;
+                    //the_posts_pagination(array());                            
+                ?>    
+            
             </div>
-        </div>
-    </div>
-</main>                    
-<!-- content body -->
 
+        </div>           
+    
+    </div>
+<!-- content body -->
+</main>
 
 <?php get_footer(); ?>

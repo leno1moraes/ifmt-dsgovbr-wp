@@ -27,8 +27,7 @@ Template Name: General Template
                             <div>
                                 <p>Postado em <?php echo get_the_date(); ?> por <?php the_author_posts_link(); ?></p>
                             </div>
-                            <?php the_excerpt(); 
-                            ?>
+                            <?php the_content(); ?>
                         </article>
                     <?php
                         endwhile;

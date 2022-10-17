@@ -464,7 +464,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_tipo_page_noticias',
         array(
-             'title' => 'Página de notícias',
+             'title' => 'Personaliza: página lista de notícias',
              'description' => 'Escolha tipo da página de notícias: 1-Padrão do sistema ou 2-Personalizado pelo usuário'
         )
     );
@@ -481,7 +481,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_page_noticias',
             array(
-                'label' => 'Página de notícias',
+                'label' => 'Personaliza: página lista de notícias',
                 'section' => 'sec_text_tipo_page_noticias',
                 'type' => 'text'
             )

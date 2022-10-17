@@ -7,6 +7,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
+
+	<!-- Facebook share -->
+	<meta property="og:title" content="<?php the_title(); ?>">
+	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>">
+
+	<!-- Twitter share -->
+	<meta name="twitter:title" content="<?php the_title(); ?>">
+	<meta name="twitter:image:src" content="<?php the_post_thumbnail_url(); ?>">
+
+	<!-- Google share -->
+	<meta itemprop="name" content="<?php the_title(); ?>">
+	<meta itemprop="image" content="<?php the_post_thumbnail_url(); ?>">
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="documentFirstHeading">', '</h1>' ); ?>
 
@@ -25,11 +38,11 @@
 					<span class="br-divider ml-auto"></span>
                 	<div class="text–font-weight-medium tex-font-size-scale-up-02">Compartilhe: 
 
-						<a class="fab fa-facebook fa-1x text-blue-warm-vivid-80" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo str_replace('http', 'https', get_permalink()); ?>"></a> 
+						<a class="fab fa-facebook fa-1x text-blue-warm-vivid-80" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a> 
 
-						<a class="fab fa-whatsapp fa-1x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http', 'https', get_permalink()); ?>"></a>
+						<a class="fab fa-whatsapp fa-1x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
 
-						<a class="fab fa-twitter fa-1x text-blue-warm-vivid-80" target="_blank" href="https://twitter.com/home?status=<?php echo str_replace('http', 'https', get_permalink()); ?>"></a>
+						<a class="fab fa-twitter fa-1x text-blue-warm-vivid-80" target="_blank" href="https://twitter.com/home?status=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
 					</div> 	
 
 				</div>

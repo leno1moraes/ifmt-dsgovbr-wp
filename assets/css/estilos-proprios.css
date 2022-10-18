@@ -40,3 +40,10 @@ h4.tileHeadline{
     color: #0c326f;
     line-height: 2.2rem;    
 }
+
+.fonteBlocoNoticias{
+    font-weight: 600;
+    color: #0c326f;
+    line-height: 1.4rem;
+    margin-bottom: 8px;    
+}

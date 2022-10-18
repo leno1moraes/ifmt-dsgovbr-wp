@@ -10,8 +10,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_page_blocodenoticias',
         array(
-             'title' => 'Habilita o bloco de notícias',
-             'description' => 'Habilita o Bloco de Notícias (1-página feita pelo usuário ou 2-página desenvolvida)'
+             'title' => 'Personaliza: bloco de notícias',
+             'description' => 'Habilita o bloco de notícias (1-Padrão do Sistema ou 2-Personalizado pelo usuário)'
         )
     );
     
@@ -27,7 +27,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_page_blocodenoticias',
             array(
-                'label' => 'Habilita o bloco de notícias',
+                'label' => 'Personaliza: bloco de notícias',
                 'section' => 'sec_text_page_blocodenoticias',
                 'type' => 'text'
             )

@@ -7,19 +7,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
-
-	<!-- Facebook share -->
-	<meta property="og:title" content="<?php the_title(); ?>">
-	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>">
-
-	<!-- Twitter share -->
-	<meta name="twitter:title" content="<?php the_title(); ?>">
-	<meta name="twitter:image:src" content="<?php the_post_thumbnail_url(); ?>">
-
-	<!-- Google share -->
-	<meta itemprop="name" content="<?php the_title(); ?>">
-	<meta itemprop="image" content="<?php the_post_thumbnail_url(); ?>">
-
 	<header class="entry-header">
 		<?php the_title( '<h1 class="documentFirstHeading">', '</h1>' ); ?>
 

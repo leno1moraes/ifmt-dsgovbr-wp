@@ -3,6 +3,35 @@
 
 function ifmtwp_customizer( $wp_customize ){
 
+    /**
+     * Personaliza filtro de posts para multisites
+     */
+    $wp_customize->add_section(
+        'sec_text_page_filtroposts',
+        array(
+             'title' => 'Personaliza: categoria multisite',
+             'description' => 'Personaliza: categoria multisite'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_page_filtroposts',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_page_filtroposts',
+            array(
+                'label' => 'Complete com: alf-bag-blv-cas-cba-cfs-cnp-dmt-gta-ifmt-jna-jna-lrv-pdl-plc',
+                'section' => 'sec_text_page_filtroposts',
+                'type' => 'text'
+            )
+        );
+
 
     /**
      * Habilita o bloco de notícias com conteúdo do wordpress ou implementando

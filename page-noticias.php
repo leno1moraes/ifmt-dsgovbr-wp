@@ -13,15 +13,19 @@ Template Name: Page Notícias
             <div class="col mb-5">
 
             <?php
-            if ( get_theme_mod( 'set_text_page_noticias') == '1' ):
-                
+
+            if ( get_theme_mod( 'set_text_page_noticias') == '1' ):                       
+
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                
+
+                $categorias_multi = get_theme_mod( 'set_text_page_filtroposts');
+
                 $args = array(
                     'post_type' => 'post',
                     'posts_per_page' => 5,
-                    'paged'=>$paged
-                );
+                    'paged' => $paged,
+                    'category_name' => $categorias_multi
+                );       
 
                 $news_query = new WP_Query( $args );
 
@@ -87,9 +91,8 @@ Template Name: Page Notícias
                 wp_reset_postdata();
 
                 else:
-            ?>
-                    <p>Não há posts</p>
-            <?php
+                    echo '<h5 class="text-red-vivid-50"> sem notícias </h5>';
+
                 endif;
                             
             elseif ( get_theme_mod( 'set_text_page_noticias') == '2' ):

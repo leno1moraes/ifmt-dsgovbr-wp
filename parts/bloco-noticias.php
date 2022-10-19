@@ -2,12 +2,13 @@
 <!-- bloco aqui - inicio -->
 
 <div>
+
 <?php 
         $i = 0;
 
         $args = array(
             'order'   => 'DESC',
-            'posts_per_page' => 3,
+            'posts_per_page' => 6,
             'max_num_pages' => 1
         );
 
@@ -18,13 +19,16 @@
             while( $news_query->have_posts() ):
                 $news_query->the_post();
 
-                if ( $i == 0 ):
+                $i++;
+
+                if ( $i == 1 or $i == 4 ):
 ?>
                     <div class="row">
 <?php
                 endif;
             
-                if ( ($i == 0) or ($i == 1) or ($i == 2) or ($i == 3) ):
+                if ( ($i == 1) or ($i == 2) or ($i == 3) or 
+                     ($i == 4) or ($i == 5) or ($i == 6) ):
 
 					if ( has_post_thumbnail() ):
 						$post_thumb = get_the_post_thumbnail_url( get_the_ID(), 'full' );
@@ -39,7 +43,7 @@
                             <div class="col">
                                 <?php //the_post_thumbnail( 'medium' ); ?>
                                 <a href="<?php the_permalink(); ?>">
-                                <img class="rounder-sm" width="100%" height="200" src="<?php echo $post_thumb; ?>" alt="Second slide">
+                                <img class="rounder-sm" width="100%" height="250" src="<?php echo $post_thumb; ?>" alt="Second slide">
                                 </a>
                             </div>
                         </div>
@@ -64,13 +68,11 @@
 <?php
                 endif;
 
-                if ( $i == 4 ):
+                if ( $i == 3 or $i == 6 ):
 ?>
                     </div>
 <?php
-                endif;
-            
-                $i++;
+                endif;                            
 
             endwhile;
            
@@ -79,10 +81,9 @@
            
         endif;
            
-        wp_reset_postdata();        
-        
+        wp_reset_postdata();                
 ?>
-
 </div>
+
 
 <!-- bloco aqui - fim -->

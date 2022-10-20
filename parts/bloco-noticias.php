@@ -5,11 +5,13 @@
 
 <?php 
         $i = 0;
+        $categorias_multi = get_theme_mod( 'set_text_page_filtroposts');
 
         $args = array(
             'order'   => 'DESC',
             'posts_per_page' => 6,
-            'max_num_pages' => 1
+            'max_num_pages' => 1,
+            'category_name' => $categorias_multi
         );
 
         $news_query = new WP_Query($args);

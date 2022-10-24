@@ -3,6 +3,37 @@
 
 function ifmtwp_customizer( $wp_customize ){
 
+
+    /**
+     * Seleciona o tipo de página de redes sociais que aparecerá
+     */
+    $wp_customize->add_section(
+        'sec_text_page_redessociais',
+        array(
+             'title' => 'Habilita: Página de Redes Sociais',
+             'description' => 'Escolha tipo da página de redes sociais'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_page_redessociais',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_page_redessociais',
+            array(
+                'label' => '1-Padrão do sistema ou 2-Personalizado pelo usuário',
+                'section' => 'sec_text_page_redessociais',
+                'type' => 'text'
+            )
+        );  
+
+
     /**
      * Personaliza filtro de posts para multisites
      */
@@ -40,7 +71,7 @@ function ifmtwp_customizer( $wp_customize ){
         'sec_text_page_blocodenoticias',
         array(
              'title' => 'Personaliza: bloco de notícias',
-             'description' => 'Habilita o bloco de notícias (1-Padrão do Sistema ou 2-Personalizado pelo usuário)'
+             'description' => 'Habilita o bloco de notícias'
         )
     );
     
@@ -56,7 +87,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_page_blocodenoticias',
             array(
-                'label' => 'Personaliza: bloco de notícias',
+                'label' => '1-Padrão do Sistema ou 2-Personalizado pelo usuário',
                 'section' => 'sec_text_page_blocodenoticias',
                 'type' => 'text'
             )
@@ -68,8 +99,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_full_size',
         array(
-             'title' => 'Componentes Full Size',
-             'description' => 'Permite os componentes ocuparem a tela toda (1-toda tela ou 2-encaixar na tela)'
+             'title' => 'Personaliza: tamanho dos componentes',
+             'description' => 'Permite os componentes ocuparem a tela toda'
         )
     );
     
@@ -85,7 +116,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_full_size',
             array(
-                'label' => 'Componentes Full Size',
+                'label' => '1-toda tela ou 2-estreito',
                 'section' => 'sec_text_full_size',
                 'type' => 'text'
             )
@@ -99,7 +130,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_rodape_normal',
         array(
-             'title' => 'Texto de rodapé normal',
+             'title' => 'Personaliza: texto de rodapé normal',
              'description' => 'Preencher com o texto de rodapé (normal)'
         )
     );
@@ -116,7 +147,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_rodape_normal',
             array(
-                'label' => 'Preencher com o texto de rodapé (normal)',
                 'section' => 'sec_text_rodape_normal',
                 'type' => 'text'
             )
@@ -125,7 +155,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_rodape_negrito',
         array(
-             'title' => 'Texto de rodapé negrito',
+             'title' => 'Personaliza: texto de rodapé negrito',
              'description' => 'Preencher com o texto de rodapé (negrito)'
         )
     );
@@ -142,7 +172,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_rodape_negrito',
             array(
-                'label' => 'Preencher com o texto de rodapé (negrito)',
                 'section' => 'sec_text_rodape_negrito',
                 'type' => 'text'
             )
@@ -155,7 +184,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_media_logo_rodape_fundo',
         array(
-             'title' => 'Logo do rodapé fundo',
+             'title' => 'Personaliza: logo do rodapé fundo',
              'description' => 'Configura logo da imagem do rodapé fundo'
         )
     );
@@ -172,7 +201,6 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_control( 
         new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_rodape_fundo', 
                                                                         array(
-                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
                                                                         'section' => 'sec_media_logo_rodape_fundo',
                                                                         'mime_type' => 'image',
                                                                         ) 
@@ -183,7 +211,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_link_rodape_fundo',
         array(
-             'title' => 'Link rodapé para fundo',
+             'title' => 'Personaliza: link do rodapé fundo',
              'description' => 'Configura e habilita o link no rodapé do fundo'
         )
     );
@@ -200,7 +228,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_link_rodape_fundo',
             array(
-                'label' => 'Configura e habilita o link no rodapé do fundo',
                 'section' => 'sec_link_rodape_fundo',
                 'type' => 'text'
             )
@@ -215,7 +242,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_link_rodape_facebook',
         array(
-             'title' => 'Link rodapé para facebook',
+             'title' => 'Personaliza: link rodapé para facebook',
              'description' => 'Configura e habilita o link no rodapé do facebook'
         )
     );
@@ -232,7 +259,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_link_rodape_facebook',
             array(
-                'label' => 'Configura e habilita o link no rodapé do facebook',
                 'section' => 'sec_link_rodape_facebook',
                 'type' => 'text'
             )
@@ -241,7 +267,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_link_rodape_youtube',
         array(
-             'title' => 'Link rodapé para youtube',
+             'title' => 'Personaliza: link rodapé para youtube',
              'description' => 'Configura e habilita o link no rodapé do youtube'
         )
     );
@@ -258,7 +284,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_link_rodape_youtube',
             array(
-                'label' => 'Configura e habilita o link no rodapé do youtube',
                 'section' => 'sec_link_rodape_youtube',
                 'type' => 'text'
             )
@@ -267,7 +292,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_link_rodape_twitter',
         array(
-             'title' => 'Link rodapé para twitter',
+             'title' => 'Personaliza: link rodapé para twitter',
              'description' => 'Configura e habilita o link no rodapé do twitter'
         )
     );
@@ -284,7 +309,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_link_rodape_twitter',
             array(
-                'label' => 'Configura e habilita o link no rodapé do twitter',
                 'section' => 'sec_link_rodape_twitter',
                 'type' => 'text'
             )
@@ -293,7 +317,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_link_rodape_instagram',
         array(
-             'title' => 'Link rodapé para instagram',
+             'title' => 'Personaliza: link rodapé para instagram',
              'description' => 'Configura e habilita o link no rodapé do instagram'
         )
     );
@@ -310,7 +334,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_link_rodape_instagram',
             array(
-                'label' => 'Configura e habilita o link no rodapé do instagram',
                 'section' => 'sec_link_rodape_instagram',
                 'type' => 'text'
             )
@@ -326,7 +349,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_media_logo_rodape',
         array(
-             'title' => 'Logo do rodapé',
+             'title' => 'Personaliza: Logo do rodapé',
              'description' => 'Configura logo da imagem do rodapé'
         )
     );
@@ -343,41 +366,11 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_control( 
         new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_rodape', 
                                                                         array(
-                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
                                                                         'section' => 'sec_media_logo_rodape',
                                                                         'mime_type' => 'image',
                                                                         ) 
                                     ) 
-    );
-
-    /**
-     * Seleciona o tipo de página de redes sociais que aparecerá
-     */
-    $wp_customize->add_section(
-        'sec_text_page_redessociais',
-        array(
-             'title' => 'Página de Redes Sociais',
-             'description' => 'Escolha tipo da página de redes sociais: 1-Padrão ou 2-Modificado'
-        )
-    );
-    
-        $wp_customize->add_setting(
-            'set_text_page_redessociais',
-            array(
-                'type' => 'theme_mod',
-                'default' => '',
-                'sanitize_callback' => 'sanitize_text_field'
-            )
-        );
-    
-        $wp_customize->add_control(
-            'set_text_page_redessociais',
-            array(
-                'label' => 'Página de Redes Sociais',
-                'section' => 'sec_text_page_redessociais',
-                'type' => 'text'
-            )
-        );     
+    );   
 
     /**
      * Configura e habilita o link das widgets da área Ações e Programas
@@ -386,8 +379,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_link_acprog1',
         array(
-             'title' => 'Link Acções e Programas 1',
-             'description' => 'Configura o link e habilita a widget do Ações e Programas 1'
+             'title' => 'Personaliza: widget ações e programas 1',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas'
         )
     );
     
@@ -403,7 +396,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_link_acprog1',
             array(
-                'label' => 'Link Acções e Programas 1',
                 'section' => 'sec_text_link_acprog1',
                 'type' => 'text'
             )
@@ -412,8 +404,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_link_acprog2',
         array(
-             'title' => 'Link Acções e Programas 2',
-             'description' => 'Configura o link e habilita a widget do Ações e Programas 2'
+             'title' => 'Personaliza: widget ações e programas 2',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas'
         )
     );
     
@@ -429,7 +421,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_link_acprog2',
             array(
-                'label' => 'Link e habl. ações e programas 2',
                 'section' => 'sec_text_link_acprog2',
                 'type' => 'text'
             )
@@ -438,8 +429,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_link_acprog3',
         array(
-             'title' => 'Link Acções e Programas 3',
-             'description' => 'Configura o link e habilita a widget do Ações e Programas 3'
+             'title' => 'Personaliza: widget ações e programas 3',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas'
         )
     );
     
@@ -455,7 +446,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_link_acprog3',
             array(
-                'label' => 'Link e habl. ações e programas 3',
                 'section' => 'sec_text_link_acprog3',
                 'type' => 'text'
             )
@@ -464,8 +454,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_link_acprog4',
         array(
-             'title' => 'Link Acções e Programas 4',
-             'description' => 'Configura o link e habilita a widget do Ações e Programas 4'
+             'title' => 'Personaliza: widget ações e programas 4',
+             'description' => 'Configura o link e habilita a widget do Ações e Programas'
         )
     );
     
@@ -481,7 +471,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_link_acprog4',
             array(
-                'label' => 'Link e habl. ações e programas 4',
                 'section' => 'sec_text_link_acprog4',
                 'type' => 'text'
             )
@@ -494,7 +483,7 @@ function ifmtwp_customizer( $wp_customize ){
         'sec_text_tipo_page_noticias',
         array(
              'title' => 'Personaliza: página lista de notícias',
-             'description' => 'Escolha tipo da página de notícias: 1-Padrão do sistema ou 2-Personalizado pelo usuário'
+             'description' => 'Escolha tipo da página de notícias'
         )
     );
     
@@ -510,7 +499,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_page_noticias',
             array(
-                'label' => 'Personaliza: página lista de notícias',
+                'label' => '1-Padrão do sistema ou 2-Personalizado pelo usuário',
                 'section' => 'sec_text_tipo_page_noticias',
                 'type' => 'text'
             )
@@ -522,8 +511,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_tipo_carousel',
         array(
-             'title' => 'Tipo de carousel',
-             'description' => 'Escolha tipo da página de notícias: 1-Padrão do sistema ou 2-Personalizado pelo usuário'
+             'title' => 'Personaliza: tipo de carousel-notícia',
+             'description' => 'Escolha o tipo'
         )
     );
     
@@ -539,7 +528,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_tipo_carousel',
             array(
-                'label' => 'Tipo de carousel',
+                'label' => '1-Padrão Gov.br ou 2-Padrão do Sistema',
                 'section' => 'sec_text_tipo_carousel',
                 'type' => 'text'
             )
@@ -551,7 +540,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_media_logo_404',
         array(
-             'title' => 'Logo de Erro 404',
+             'title' => 'Personaliza: logo Erro 404',
              'description' => 'Use uma imagem para erro 404'
         )
     );
@@ -568,7 +557,6 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_control( 
         new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_404', 
                                                                         array(
-                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
                                                                         'section' => 'sec_media_logo_404',
                                                                         'mime_type' => 'image',
                                                                         ) 
@@ -584,7 +572,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_media_logo_gov_federal',
         array(
-             'title' => 'Logo do Governo Federal',
+             'title' => 'Personaliza: logo do Governo Federal',
              'description' => 'Use uma imagem oficial do governo federal'
         )
     );
@@ -601,7 +589,6 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_control( 
         new WP_Customize_Media_Control( $wp_customize, 'set_media_logo_gov_federal', 
                                                                         array(
-                                                                        'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
                                                                         'section' => 'sec_media_logo_gov_federal',
                                                                         'mime_type' => 'image',
                                                                         ) 
@@ -615,8 +602,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_slug_insituicao',
         array(
-             'title' => 'Instituição',
-             'description' => 'Campo para preencher com o nome da Instituição. Exemplo: Instituto Federal de Mato Grosso'
+             'title' => 'Personaliza: nome da instituição',
+             'description' => 'Preencher com o nome da Instituição'
         )
     );
     
@@ -632,7 +619,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_slug_insituicao',
             array(
-                'label' => 'Instituição',
                 'section' => 'sec_text_slug_insituicao',
                 'type' => 'text'
             )
@@ -644,8 +630,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_slug_campus',
         array(
-             'title' => 'Campus',
-             'description' => 'Campo para preencher com o nome do Campus'
+             'title' => 'Personaliza: nome do campus',
+             'description' => 'Preencher com o nome do Campus'
         )
     );
     
@@ -661,7 +647,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_slug_campus',
             array(
-                'label' => 'Campus',
                 'section' => 'sec_text_slug_campus',
                 'type' => 'text'
             )
@@ -674,7 +659,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section( 
         'sec_theme_slug_customizer01', 
         array(
-            'title' => esc_html__( 'Link de Acesso 1', 'theme_slug' )
+            'title' => esc_html__( 'Personaliza: link de acesso 1', 'theme_slug' )
         )
     );                      
         $wp_customize->add_setting( 
@@ -687,7 +672,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control( 
             'set_slug_customizer_url01', 
             array(
-                'label' => esc_html__( 'Insira a URL aqui', 'theme_slug' ),
+                'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
                 'section' => 'sec_theme_slug_customizer01',
                 'type' => 'url'
             )
@@ -696,8 +681,8 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section(
         'sec_text_slug_customizer01',
         array(
-             'title' => 'Texto do Link de Acesso 1',
-             'description' => 'Texto do Link de Acesso 1'
+             'title' => 'Personaliza: texto link de acesso 1',
+             'description' => 'Texto do link de acesso 1'
         )
     );
     
@@ -705,7 +690,7 @@ function ifmtwp_customizer( $wp_customize ){
             'set_text_slug_customizer01',
             array(
                 'type' => 'theme_mod',
-                'default' => 'Texto do Link de Acesso 1',
+                'default' => 'Texto do link de acesso 1',
                 'sanitize_callback' => 'sanitize_text_field'
             )
         );
@@ -713,8 +698,6 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_control(
             'set_text_slug_customizer01',
             array(
-                'label' => 'Texto do Link de Acesso 1',
-                'description' => 'Adicione o texto aqui',
                 'section' => 'sec_text_slug_customizer01',
                 'type' => 'text'
             )
@@ -730,7 +713,7 @@ function ifmtwp_customizer( $wp_customize ){
     $wp_customize->add_section( 
         'sec_theme_slug_customizer02', 
         array(
-            'title' => esc_html__( 'Link de Acesso 2', 'theme_slug' )
+            'title' => esc_html__( 'Personaliza: link de Acesso 2', 'theme_slug' )
         )
     );                      
         $wp_customize->add_setting( 
@@ -752,7 +735,7 @@ function ifmtwp_customizer( $wp_customize ){
         $wp_customize->add_section(
             'sec_text_slug_customizer02',
             array(
-                 'title' => 'Texto do Link de Acesso 2',
+                 'title' => 'Personaliza: texto link de acesso 2',
                  'description' => 'Texto do Link de Acesso 2'
             )
         );
@@ -769,8 +752,6 @@ function ifmtwp_customizer( $wp_customize ){
             $wp_customize->add_control(
                 'set_text_slug_customizer02',
                 array(
-                    'label' => 'Texto do Link de Acesso 2',
-                    'description' => 'Adicione o texto aqui',
                     'section' => 'sec_text_slug_customizer02',
                     'type' => 'text'
                 )

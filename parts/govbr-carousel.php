@@ -11,8 +11,12 @@
 
                     <div class="carousel-stage">
                           <?php
+                          $categorias_multi = get_theme_mod( 'set_text_page_filtroposts');
+
                           $args = array(
-                              'posts_per_page' => 5
+                              'posts_per_page' => 5,
+                              'category_name' => $categorias_multi,
+                              'post_type' => 'post'
                           );
                           $news_query = new WP_Query( $args );
 

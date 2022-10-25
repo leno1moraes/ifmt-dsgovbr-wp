@@ -12,6 +12,7 @@
 
 	$categorias_multi = get_theme_mod( 'set_text_page_filtroposts');
 	$args['category_name'] = $categorias_multi;
+	$args['post_type'] = 'post';
 
 	$feature_news_query = new WP_Query( $args );
 	if ( $feature_news_query->have_posts() ) : $i = 0; ?>

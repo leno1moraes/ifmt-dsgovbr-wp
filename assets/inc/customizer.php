@@ -5,6 +5,305 @@ function ifmtwp_customizer( $wp_customize ){
 
 
     /**
+     * ÁREA DE SERVIÇOS - INÍCIO
+     */    
+    //1
+    $wp_customize->add_section(
+        'sec_text_servicoes1',
+        array(
+             'title' => 'Personaliza: texto da área de serviços 1',
+             'description' => 'Personaliza: texto da área de serviços 1'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_servicoes1',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_servicoes1',
+            array(
+                'label' => 'Preencha com texto curto',
+                'section' => 'sec_text_servicoes1',
+                'type' => 'text'
+            )
+        );      
+        $wp_customize->add_section(
+            'sec_text_serv_fa_1',
+            array(
+                 'title' => 'Personaliza: código ícone área de serviços 1',
+                 'description' => 'Personaliza: código ícone área de serviços 1'
+            )
+        );
+        
+            $wp_customize->add_setting(
+                'set_text_serv_fa_1',
+                array(
+                    'type' => 'theme_mod',
+                    'default' => '',
+                    'sanitize_callback' => 'sanitize_text_field'
+                )
+            );
+        
+            $wp_customize->add_control(
+                'set_text_serv_fa_1',
+                array(
+                    'label' => 'Preencha de acordo com modelo: fas fa-bullhorn (https://fontawesome.com/v4/)',
+                    'section' => 'sec_text_serv_fa_1',
+                    'type' => 'text'
+                )
+            ); 
+            $wp_customize->add_section( 
+                'sec_url_servico_1', 
+                array(
+                    'title' => esc_html__( 'Personaliza: link para area de serviços 1', 'theme_slug' )
+                )
+            );                      
+                $wp_customize->add_setting( 
+                    'set_url_servico_1', 
+                    array(
+                        'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+                    )
+                );
+                
+                $wp_customize->add_control( 
+                    'set_url_servico_1', 
+                    array(
+                        'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                        'section' => 'sec_url_servico_1',
+                        'type' => 'url'
+                    )
+                );            
+
+        //2
+        $wp_customize->add_section(
+            'sec_text_servicoes2',
+            array(
+                 'title' => 'Personaliza: texto da área de serviços 2',
+                 'description' => 'Personaliza: texto da área de serviços 2'
+            )
+        );
+        
+            $wp_customize->add_setting(
+                'set_text_servicoes2',
+                array(
+                    'type' => 'theme_mod',
+                    'default' => '',
+                    'sanitize_callback' => 'sanitize_text_field'
+                )
+            );
+        
+            $wp_customize->add_control(
+                'set_text_servicoes2',
+                array(
+                    'label' => 'Preencha com texto curto',
+                    'section' => 'sec_text_servicoes2',
+                    'type' => 'text'
+                )
+            );
+            $wp_customize->add_section(
+                'sec_text_serv_fa_2',
+                array(
+                     'title' => 'Personaliza: código ícone área de serviços 2',
+                     'description' => 'Personaliza: código ícone área de serviços 2'
+                )
+            );
+            
+                $wp_customize->add_setting(
+                    'set_text_serv_fa_2',
+                    array(
+                        'type' => 'theme_mod',
+                        'default' => '',
+                        'sanitize_callback' => 'sanitize_text_field'
+                    )
+                );
+            
+                $wp_customize->add_control(
+                    'set_text_serv_fa_2',
+                    array(
+                        'label' => 'Preencha de acordo com modelo: fas fa-bullhorn (https://fontawesome.com/v4/)',
+                        'section' => 'sec_text_serv_fa_2',
+                        'type' => 'text'
+                    )
+                );  
+                $wp_customize->add_section( 
+                    'sec_url_servico_2', 
+                    array(
+                        'title' => esc_html__( 'Personaliza: link para area de serviços 2', 'theme_slug' )
+                    )
+                );                      
+                    $wp_customize->add_setting( 
+                        'set_url_servico_2', 
+                        array(
+                            'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+                        )
+                    );
+                    
+                    $wp_customize->add_control( 
+                        'set_url_servico_2', 
+                        array(
+                            'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                            'section' => 'sec_url_servico_2',
+                            'type' => 'url'
+                        )
+                    );                     
+
+            //3
+            $wp_customize->add_section(
+                'sec_text_servicoes3',
+                array(
+                     'title' => 'Personaliza: texto da área de serviços 3',
+                     'description' => 'Personaliza: texto da área de serviços 3'
+                )
+            );
+            
+                $wp_customize->add_setting(
+                    'set_text_servicoes3',
+                    array(
+                        'type' => 'theme_mod',
+                        'default' => '',
+                        'sanitize_callback' => 'sanitize_text_field'
+                    )
+                );
+            
+                $wp_customize->add_control(
+                    'set_text_servicoes3',
+                    array(
+                        'label' => 'Preencha com texto curto',
+                        'section' => 'sec_text_servicoes3',
+                        'type' => 'text'
+                    )
+                );    
+                $wp_customize->add_section(
+                    'sec_text_serv_fa_3',
+                    array(
+                         'title' => 'Personaliza: código ícone área de serviços 3',
+                         'description' => 'Personaliza: código ícone área de serviços 3'
+                    )
+                );
+                
+                    $wp_customize->add_setting(
+                        'set_text_serv_fa_3',
+                        array(
+                            'type' => 'theme_mod',
+                            'default' => '',
+                            'sanitize_callback' => 'sanitize_text_field'
+                        )
+                    );
+                
+                    $wp_customize->add_control(
+                        'set_text_serv_fa_3',
+                        array(
+                            'label' => 'Preencha de acordo com modelo: fas fa-bullhorn (https://fontawesome.com/v4/)',
+                            'section' => 'sec_text_serv_fa_3',
+                            'type' => 'text'
+                        )
+                    ); 
+                    $wp_customize->add_section( 
+                        'sec_url_servico_3', 
+                        array(
+                            'title' => esc_html__( 'Personaliza: link para area de serviços 3', 'theme_slug' )
+                        )
+                    );                      
+                        $wp_customize->add_setting( 
+                            'set_url_servico_3', 
+                            array(
+                                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+                            )
+                        );
+                        
+                        $wp_customize->add_control( 
+                            'set_url_servico_3', 
+                            array(
+                                'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                                'section' => 'sec_url_servico_3',
+                                'type' => 'url'
+                            )
+                        );                                               
+                
+                //4
+                $wp_customize->add_section(
+                    'sec_text_servicoes4',
+                    array(
+                         'title' => 'Personaliza: texto da área de serviços 4',
+                         'description' => 'Personaliza: texto da área de serviços 4'
+                    )
+                );
+                
+                    $wp_customize->add_setting(
+                        'set_text_servicoes4',
+                        array(
+                            'type' => 'theme_mod',
+                            'default' => '',
+                            'sanitize_callback' => 'sanitize_text_field'
+                        )
+                    );
+                
+                    $wp_customize->add_control(
+                        'set_text_servicoes4',
+                        array(
+                            'label' => 'Preencha com texto curto',
+                            'section' => 'sec_text_servicoes4',
+                            'type' => 'text'
+                        )
+                    );  
+
+                    $wp_customize->add_section(
+                        'sec_text_serv_fa_4',
+                        array(
+                             'title' => 'Personaliza: código ícone área de serviços 4',
+                             'description' => 'Personaliza: código ícone área de serviços 4'
+                        )
+                    );
+                    
+                        $wp_customize->add_setting(
+                            'set_text_serv_fa_4',
+                            array(
+                                'type' => 'theme_mod',
+                                'default' => '',
+                                'sanitize_callback' => 'sanitize_text_field'
+                            )
+                        );
+                    
+                        $wp_customize->add_control(
+                            'set_text_serv_fa_4',
+                            array(
+                                'label' => 'Preencha de acordo com modelo: fas fa-bullhorn (https://fontawesome.com/v4/)',
+                                'section' => 'sec_text_serv_fa_4',
+                                'type' => 'text'
+                            )
+                        );     
+                        $wp_customize->add_section( 
+                            'sec_url_servico_4', 
+                            array(
+                                'title' => esc_html__( 'Personaliza: link para area de serviços 4', 'theme_slug' )
+                            )
+                        );                      
+                            $wp_customize->add_setting( 
+                                'set_url_servico_4', 
+                                array(
+                                    'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+                                )
+                            );
+                            
+                            $wp_customize->add_control( 
+                                'set_url_servico_4', 
+                                array(
+                                    'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                                    'section' => 'sec_url_servico_4',
+                                    'type' => 'url'
+                                )
+                            );                                         
+    /**
+     * ÁREA DE SERVIÇOS - FIM
+     */  
+
+    /**
      * Seleciona o tipo de página de redes sociais que aparecerá
      */
     $wp_customize->add_section(

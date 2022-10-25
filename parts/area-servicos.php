@@ -14,7 +14,7 @@
                     <div class="card-content text-center">
                         <span class="<?php if ( get_theme_mod( 'set_text_serv_fa_1') != '' ): echo get_theme_mod( 'set_text_serv_fa_1'); else: echo 'fas fa-bullhorn'; endif; ?> text-up-07 text-indigo-cool-vivid-80"></span>
                     </div>  
-                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80 h6"><?php if ( get_theme_mod( 'set_text_servicoes1') != '' ): echo get_theme_mod( 'set_text_servicoes1'); else: echo 'INSERIR TEXTO 1'; endif; ?></div>
+                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80"><b><?php if ( get_theme_mod( 'set_text_servicoes1') != '' ): echo get_theme_mod( 'set_text_servicoes1'); else: echo 'INSERIR TEXTO 1'; endif; ?></b></div>
                 </a>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <div class="card-content text-center">
                         <span class="<?php if ( get_theme_mod( 'set_text_serv_fa_2') != '' ): echo get_theme_mod( 'set_text_serv_fa_2'); else: echo 'fas fa-bullhorn'; endif; ?> text-up-07 text-indigo-cool-vivid-80"></span>
                     </div>  
-                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80 h6"><?php if ( get_theme_mod( 'set_text_servicoes2') != '' ): echo get_theme_mod( 'set_text_servicoes2'); else: echo 'INSERIR TEXTO 2'; endif; ?></div>
+                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80"><b><?php if ( get_theme_mod( 'set_text_servicoes2') != '' ): echo get_theme_mod( 'set_text_servicoes2'); else: echo 'INSERIR TEXTO 2'; endif; ?></b></div>
                 </a>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     <div class="card-content text-center">
                         <span class="<?php if ( get_theme_mod( 'set_text_serv_fa_3') != '' ): echo get_theme_mod( 'set_text_serv_fa_3'); else: echo 'fas fa-bullhorn'; endif; ?> text-up-07 text-indigo-cool-vivid-80"></span>
                     </div>  
-                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80 h6"><?php if ( get_theme_mod( 'set_text_servicoes3') != '' ): echo get_theme_mod( 'set_text_servicoes3'); else: echo 'INSERIR TEXTO 3'; endif; ?></div>
+                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80"><b><?php if ( get_theme_mod( 'set_text_servicoes3') != '' ): echo get_theme_mod( 'set_text_servicoes3'); else: echo 'INSERIR TEXTO 3'; endif; ?></b></div>
                 </a>
             </div>
         </div>  
@@ -47,7 +47,7 @@
                     <div class="card-content text-center">
                         <span class="<?php if ( get_theme_mod( 'set_text_serv_fa_4') != '' ): echo get_theme_mod( 'set_text_serv_fa_4'); else: echo 'fas fa-bullhorn'; endif; ?> text-up-07 text-indigo-cool-vivid-80"></span>
                     </div>  
-                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80 h6"><?php if ( get_theme_mod( 'set_text_servicoes4') != '' ): echo get_theme_mod( 'set_text_servicoes4'); else: echo 'INSERIR TEXTO 4'; endif; ?></div>
+                    <div class="card-footer my-1 text-center text-blue-warm-vivid-80 text-font-weight-black"><b><?php if ( get_theme_mod( 'set_text_servicoes4') != '' ): echo get_theme_mod( 'set_text_servicoes4'); else: echo 'INSERIR TEXTO 4'; endif; ?></b></div>
                 </a>
             </div>
         </div>          

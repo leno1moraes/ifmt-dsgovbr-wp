@@ -8,7 +8,7 @@ Template Name: Page Notícias
 
 <!-- content body -->
 <main class="d-flex flex-fill mb-5" id="main">
-    <div class="container-lg d-flex">
+    <div class="container-lg">
         <div class="row">
             <div class="col mb-5">
 

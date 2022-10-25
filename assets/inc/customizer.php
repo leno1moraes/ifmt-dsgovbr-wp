@@ -5,6 +5,309 @@ function ifmtwp_customizer( $wp_customize ){
 
 
     /**
+     * ÁREA DE AÇÕES E PROGRAMAS - INÍCIO
+     */  
+    //1   
+    $wp_customize->add_section(
+        'sec_media_acoesprog1',
+        array(
+             'title' => 'Personaliza: img em ações e programas 1',
+             'description' => 'Configura img de ações e programas 1'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_media_acoesprog1',
+        array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+        )
+    );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_acoesprog1', 
+                                                                        array(
+                                                                        'section' => 'sec_media_acoesprog1',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+    $wp_customize->add_section(
+        'sec_text_acoesprog1',
+        array(
+             'title' => 'Personaliza: texto da área ações e programas 1',
+             'description' => 'Personaliza: texto da área ações e programas 1'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_acoesprog1',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_acoesprog1',
+            array(
+                'label' => 'Preencha com texto curto',
+                'section' => 'sec_text_acoesprog1',
+                'type' => 'text'
+            )
+        );     
+
+        $wp_customize->add_section( 
+            'sec_url_acoesprog1', 
+            array(
+                'title' => esc_html__( 'Personaliza: link para area de ações e programas 1', 'theme_slug' )
+            )
+        );                      
+        $wp_customize->add_setting( 
+            'set_url_acoesprog1', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+            
+        $wp_customize->add_control( 
+            'set_url_acoesprog1', 
+            array(
+                'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                'section' => 'sec_url_acoesprog1',
+                'type' => 'url'
+            )
+        );        
+
+    //2 
+    $wp_customize->add_section(
+        'sec_media_acoesprog2',
+        array(
+             'title' => 'Personaliza: img em ações e programas 2',
+             'description' => 'Configura img de ações e programas 2'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_media_acoesprog2',
+        array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+        )
+    );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_acoesprog2', 
+                                                                        array(
+                                                                        'section' => 'sec_media_acoesprog2',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+    $wp_customize->add_section(
+        'sec_text_acoesprog2',
+        array(
+             'title' => 'Personaliza: texto da área ações e programas 2',
+             'description' => 'Personaliza: texto da área ações e programas 2'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_acoesprog2',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_acoesprog2',
+            array(
+                'label' => 'Preencha com texto curto',
+                'section' => 'sec_text_acoesprog2',
+                'type' => 'text'
+            )
+        );     
+
+        $wp_customize->add_section( 
+            'sec_url_acoesprog2', 
+            array(
+                'title' => esc_html__( 'Personaliza: link para area de acoesprog2', 'theme_slug' )
+            )
+        );                      
+        $wp_customize->add_setting( 
+            'set_url_acoesprog2', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+            
+        $wp_customize->add_control( 
+            'set_url_acoesprog2', 
+            array(
+                'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                'section' => 'sec_url_acoesprog2',
+                'type' => 'url'
+            )
+        );  
+    
+    //3
+    $wp_customize->add_section(
+        'sec_media_acoesprog3',
+        array(
+             'title' => 'Personaliza: img em ações e programas 3',
+             'description' => 'Configura img de ações e programas 3'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_media_acoesprog3',
+        array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+        )
+    );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_acoesprog3', 
+                                                                        array(
+                                                                        'section' => 'sec_media_acoesprog3',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+    $wp_customize->add_section(
+        'sec_text_acoesprog3',
+        array(
+             'title' => 'Personaliza: texto da área ações e programas 3',
+             'description' => 'Personaliza: texto da área ações e programas 3'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_acoesprog3',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_acoesprog3',
+            array(
+                'label' => 'Preencha com texto curto',
+                'section' => 'sec_text_acoesprog3',
+                'type' => 'text'
+            )
+        );     
+
+        $wp_customize->add_section( 
+            'sec_url_acoesprog3', 
+            array(
+                'title' => esc_html__( 'Personaliza: link para area de acoesprog3', 'theme_slug' )
+            )
+        );                      
+        $wp_customize->add_setting( 
+            'set_url_acoesprog3', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+            
+        $wp_customize->add_control( 
+            'set_url_acoesprog3', 
+            array(
+                'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                'section' => 'sec_url_acoesprog3',
+                'type' => 'url'
+            )
+        );  
+    
+    //4
+    $wp_customize->add_section(
+        'sec_media_acoesprog4',
+        array(
+             'title' => 'Personaliza: img em ações e programas 4',
+             'description' => 'Configura img de ações e programas 4'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'set_media_acoesprog4',
+        array(
+            'type' => 'theme_mod',
+            'default' => '',
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+        )
+    );    
+
+    $wp_customize->add_control( 
+        new WP_Customize_Media_Control( $wp_customize, 'set_media_acoesprog4', 
+                                                                        array(
+                                                                        'section' => 'sec_media_acoesprog4',
+                                                                        'mime_type' => 'image',
+                                                                        ) 
+                                    ) 
+    );
+    $wp_customize->add_section(
+        'sec_text_acoesprog4',
+        array(
+             'title' => 'Personaliza: texto da área ações e programas 4',
+             'description' => 'Personaliza: texto da área ações e programas 4'
+        )
+    );
+    
+        $wp_customize->add_setting(
+            'set_text_acoesprog4',
+            array(
+                'type' => 'theme_mod',
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field'
+            )
+        );
+    
+        $wp_customize->add_control(
+            'set_text_acoesprog4',
+            array(
+                'label' => 'Preencha com texto curto',
+                'section' => 'sec_text_acoesprog4',
+                'type' => 'text'
+            )
+        );     
+
+        $wp_customize->add_section( 
+            'sec_url_acoesprog4', 
+            array(
+                'title' => esc_html__( 'Personaliza: link para area de acoesprog4', 'theme_slug' )
+            )
+        );                      
+        $wp_customize->add_setting( 
+            'set_url_acoesprog4', 
+            array(
+                'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+            )
+        );
+            
+        $wp_customize->add_control( 
+            'set_url_acoesprog4', 
+            array(
+                'label' => esc_html__( 'Insira URL aqui', 'theme_slug' ),
+                'section' => 'sec_url_acoesprog4',
+                'type' => 'url'
+            )
+        );      
+
+    /**
+     * ÁREA DE AÇÕES E PROGRAMAS - FIM
+     */     
+
+    /**
      * ÁREA DE SERVIÇOS - INÍCIO
      */    
     //1

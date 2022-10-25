@@ -16,7 +16,7 @@
 <?php
     endif;
 ?>                             
-        <div>
+        <div class="container">
             <?php if ( get_theme_mod( 'set_text_tipo_carousel', '') == '1'): ?>                        
                 <?php get_template_part('parts/govbr-carousel'); ?>                               
             <?php else: ?>

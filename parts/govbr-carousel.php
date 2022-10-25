@@ -1,13 +1,9 @@
-            <!-- CAROUSEL padrao BR -->
-            
-            <div class="container">
+            <!-- CAROUSEL padrao BR -->                      
 
             <div class="row">
-
                 <div class="col-sm-12 col-md">
 
                   <div class="br-carousel" data-circular="true" data-stage="in" data-mobile-nav="">
-
                     <div class="carousel-button">
                       <button class="br-button carousel-btn-prev terciary circle" type="button" aria-label="Anterior"><i class="fas fa-angle-left" aria-hidden="false"></i>
                       </button>
@@ -61,9 +57,9 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
+
                 </div>
-              </div>  
-            </div>          
+            </div>  
+                    
             <!-- CAROUSEL padrao BR -->

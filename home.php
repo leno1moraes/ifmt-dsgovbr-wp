@@ -17,10 +17,8 @@
     endif;
 ?>                             
         <div>
-            <?php if ( get_theme_mod( 'set_text_tipo_carousel', '') == '1'): ?>
-                <section>
-                    <?php get_template_part('parts/govbr-carousel'); ?>
-                </section>    
+            <?php if ( get_theme_mod( 'set_text_tipo_carousel', '') == '1'): ?>                        
+                <?php get_template_part('parts/govbr-carousel'); ?>                               
             <?php else: ?>
                 <section class="carousel-wrapper">
                     <?php get_template_part('parts/jumbotron-carousel'); ?>

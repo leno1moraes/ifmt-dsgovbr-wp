@@ -32,6 +32,16 @@ function ifmtwp_load_scripts(){
     wp_enqueue_style( 'jumbotron-style', get_template_directory_uri() . '/assets/css/jumbotron-carousel-mod.css');
     wp_enqueue_script( 'jumbotron-script', get_template_directory_uri() . '/assets/js/bundle.js', array('jquery'), '1.7', true );
 
+    //Habilitar visualização da página de facebook
+    wp_enqueue_script( 'ifmtwp-Facebook', 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v15.0', '15.0', true );
+
+    //Habilitar visualização da página de twitter
+    wp_enqueue_script( 'ifmtwp-Twitter', 'https://platform.twitter.com/widgets.js', '1.0', true );
+
+    //Habilitar visualização da página de Instagramn
+    //wp_enqueue_script( 'ifmtwp-Instagram', 'https://www.instagram.com/embed.js', '1.0', true );        
+
+
     
 }
 add_action( 'wp_enqueue_scripts', 'ifmtwp_load_scripts' );

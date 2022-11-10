@@ -1,0 +1,17 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ifmtplugin/tabs",
+	"version": "1.0",
+	"title": "Tabs or Accordion",
+	"category": "widgets",
+	"icon": "image",
+	"description": "User-friendly tabs or accordion block",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "ifmtplugin-tabs",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

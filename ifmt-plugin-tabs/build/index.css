@@ -1,0 +1,141 @@
+body {
+    --pds-tabs-color-accent: var(--wp--preset--color--primary, #333);
+    --pds-tabs-active-tab-text-color: #333;
+    --pds-tabs-color-background: var(--wp--preset--color--background, #fff);
+    --pds-tabs-color-accent-contrast: var(--pds-tabs-color-background);
+    --pds-tabs-padding: 1rem;
+    --pds-tabs-v-padding-mobile: var(--pds-tabs-padding) var(--pds-tabs-padding) var(--pds-tabs-padding) 0;
+    --pds-tabs-margin: 0;
+    --pds-tabs-vertical-column-gap: var(--wp--style--block-gap, 2em);
+    --pds-tabs-vertical-column-gap-mobile: 1em;
+    --pds-tabs-tab-line-color: currentColor;
+    --pds-tabs-tab-line-color-active: currentColor;
+    --pds-tabs-h-tab-line-color: transparent;
+    --pds-tabs-h-tab-line-color-active: var(--pds-tabs-tab-line-color-active);
+    --pds-tabs-v-tab-line-color: #dadbdc;
+    --pds-tabs-v-tab-line-color-active: var(--pds-tabs-tab-line-color-active);
+    --pds-tabs-acc-header-font-family: var(--pds-tabs-header-font-family);
+    --pds-tabs-acc-header-font-weight: 700;
+    --pds-tabs-acc-header-font-size: 1.0625rem;
+    --pds-tabs-acc-header-line-height: 1.375rem;
+    --pds-tabs-acc-header-padding: 1.25rem;
+    --pds-tabs-v-tab-font-family: var(--pds-tabs-header-font-family);
+    --pds-tabs-h-tab-font-family: var(--pds-tabs-header-font-family);
+    --pds-tabs-tab-gap: 1em;
+    --pds-tabs-acc-header-gap: 0.3125rem;
+    --pds-tabs-content-text-color: inherit;
+    --pds-tabs-tab-text-color: var(--pds-tabs-color-accent);
+    --pds-tabs-active-tab-text-color: var(--wp--preset--color--foreground, #333);
+    --pds-tabs-accordion-header-background: none;
+    --pds-tabs-accordion-header-text-color: inherit;
+    --pds-tabs-tab-text-color-basic: var(--pds-tabs-color-accent);
+    --pds-tabs-active-tab-text-color-basic: var(--wp--preset--color--primary, #333);
+    --pds-tabs-h-tab-line-width-basic: 0.1875rem;
+    --pds-tabs-h-tab-gap-basic: 1.25rem;
+    --pds-tabs-h-tabs-list-underline-width-basic: 1px;
+    --pds-tabs-h-tabs-list-underline-color-basic: #dadbdc;
+    --pds-tabs-h-content-margin-basic: 2.5em 0 0 0;
+    --pds-tabs-v-content-margin-basic: 0;
+    --pds-tabs-v-tab-padding-basic: 0.75em 1em;
+    --pds-tabs-v-tab-padding-mobile-basic: 1vw 2vw;
+    --pds-tabs-v-tab-min-height-basic: 2.75em;
+    --pds-tabs-v-tab-line-height-basic: 1.4;
+    --pds-tabs-vertical-column-gap-mobile-basic: 0;
+    --pds-tabs-v-tab-gap-basic: 0.625rem;
+    --pds-tabs-v-tab-line-width-basic: 0.25em;
+    --pds-tabs-acc-header-gap-basic: var(--pds-tabs-acc-header-gap);
+    --pds-tabs-acc-content-padding-basic: 1.5625em 1.25em;
+    --pds-tabs-accordion-header-background-basic: var(--pds-tabs-color-accent);
+    --pds-tabs-accordion-header-text-color-basic: var(--pds-tabs-color-accent-contrast);
+    --pds-tabs-acc-header-padding-basic: var(--pds-tabs-acc-header-padding);
+    --pds-tabs-tab-background-color-tabby: var(--pds-tabs-color-accent);
+    --pds-tabs-tab-background-color-alt-tabby: rgba(0, 0, 0, 0.5);
+    --pds-tabs-tab-text-color-tabby: var(--pds-tabs-color-accent-contrast);
+    --pds-tabs-vertical-column-gap-mobile-tabby: var(--pds-tabs-vertical-column-gap-mobile);
+    --pds-tabs-active-tab-background-color-tabby: var(--pds-tabs-color-background);
+    --pds-tabs-active-tab-text-color-tabby: var(--pds-tabs-color-accent);
+    --pds-tabs-accordion-header-background-tabby: var(--pds-tabs-color-accent);
+    --pds-tabs-accordion-header-text-color-tabby: var(--pds-tabs-color-accent-contrast);
+    --pds-tabs-border-radius-tabby: 0;
+    --pds-tabs-tab-border-radius-tabby: var(--pds-tabs-border-radius-tabby);
+    --pds-tabs-acc-border-radius-tabby: var(--pds-tabs-border-radius-tabby);
+    --pds-tabs-h-tab-flex-grow-last-tabby: 0;
+    --pds-tabs-acc-header-padding-tabby: var(--pds-tabs-acc-header-padding);
+    --pds-tabs-tab-padding-tabby: 1em;
+    --pds-tabs-h-tab-padding-tabby: var(--pds-tabs-tab-padding-tabby);
+    --pds-tabs-v-tab-padding-tabby: var(--pds-tabs-tab-padding-tabby);
+    --pds-tabs-h-content-padding-tabby: 1em;
+    --pds-tabs-v-content-padding-tabby: 1em 1em 1em 0;
+    --pds-tabs-acc-content-padding-tabby: 1.5625em 1.25em;
+    --pds-tabs-tab-gap-tabby: 1px;
+    --pds-tabs-h-tab-gap-tabby: var(--pds-tabs-tab-gap-tabby);
+    --pds-tabs-v-tab-gap-tabby: var(--pds-tabs-tab-gap-tabby);
+    --pds-tabs-acc-header-gap-tabby: var(--pds-tabs-acc-header-gap);
+    --pds-tabs-v-padding-tabby: 0;
+}
+body.elementor-default {
+    --pds-tabs-color-accent: var(--e-global-color-accent, #333);
+    --pds-tabs-active-tab-text-color: var(--e-global-color-primary, #333);
+    --pds-tabs-active-tab-text-color-basic: var(--pds-tabs-active-tab-text-color);
+    --pds-tabs-tab-background-color-alt-tabby: var(--e-global-color-secondary, rgba(0, 0, 0, 0.5));
+}
+.wp-block-ifmtplugin-tabs:focus-within {
+    outline: 2px solid red;
+}
+.wp-block-ifmtplugin-tabs .pds-accordion__item:not(.active) .pds-accordion__content {
+    display: none;
+}
+.wp-block-ifmtplugin-tabs .ifmtplugin-tabs--content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+    border: 1px solid #ccc;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+.wp-block-ifmtplugin-tabs .ifmtplugin-tabs--content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender button {
+    height: auto;
+    margin: 0;
+    width: auto;
+}
+.wp-block-ifmtplugin-tabs .ifmtplugin-tabs--content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender button:before {
+    background: #efefef;
+    color: #000;
+    content: "Add Tab";
+    font-weight: 700;
+    padding: 4px;
+}
+.wp-block-ifmtplugin-tabs .ifmtplugin-tabs--content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender button:hover:before {
+    background: var(--wp-admin-theme-color);
+    color: #fff;
+}
+.wp-block-ifmtplugin-tabs .ifmtplugin-sidenavjump-panel:not(.active) {
+    display: none;
+}
+.wp-block-ifmtplugin-tabs [data-layout="accordion"] .ifmtplugin-tabs--content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender button:before {
+    content: "Add Accordion Item";
+}
+.wp-block-ifmtplugin-tabs.has-child-selected [data-layout="horizontal"] > :first-child,
+.wp-block-ifmtplugin-tabs.is-selected [data-layout="horizontal"] > :first-child {
+    padding-top: 4rem;
+    transform: translateY(-3rem);
+}
+.components-panel .ifmtplugin-tabs-edit-anchors li,
+.components-panel .ifmtplugin-tabs-edit-anchors ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.components-panel .ifmtplugin-tabs-edit-anchors .components-base-control__field {
+    padding: 5px;
+}
+.components-panel .ifmtplugin-tabs-edit-anchors .components-base-control__field label {
+    display: inline-block;
+    margin-right: 5px;
+    width: 60px;
+}
+.components-panel .ifmtplugin-tabs-edit-anchors .components-base-control__field input {
+    display: inline-block;
+    width: calc(100% - 75px);
+}
+.pds-accordion__item.is-selected {
+    border-bottom: 1px solid var(--wp-admin-theme-color) !important;
+}

@@ -27,7 +27,7 @@
 					if ( has_post_thumbnail() ) {
 						$post_thumb = get_the_post_thumbnail_url( get_the_ID(), 'carousel-feature' );
 					} else {
-						$post_thumb = get_template_directory_uri() . '/assets/images/teste-personagem.jpg';
+						$post_thumb = get_template_directory_uri() . '/assets/images/tela_site_ifmt_final.jpg';
 					}
 					?>	
 							

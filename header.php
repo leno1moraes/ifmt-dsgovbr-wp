@@ -157,7 +157,7 @@
                                     -->
                                     
                                     <div class="align-items-center br-item">
-                                        <button class="br-button circle small" type="button" aria-label="Funcionalidade 4"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Funcionalidade 4</span>
+                                        <button class="br-button circle small" type="button" aria-label="Funcionalidade 4" onclick="mudarContraste()"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Funcionalidade 4</span>
                                         </button>
                                     </div>
                                 </div>
@@ -169,6 +169,7 @@
                                 </button>
                             </div><!-- header-search-trigger -->                            
 
+                            <!--
                             <div class="header-login">
                                 <div class="header-sign-in">
                                     <button class="br-sign-in small" type="button" data-trigger="login"><i class="fas fa-user" aria-hidden="true"></i><span class="d-sm-inline">Entrar</span>
@@ -257,19 +258,21 @@
                                                                     <span>Sunt velit dolor enim mollit incididunt irure est. Ad ea Lorem culpa quis occaecat sunt in exercitation nisi. Sit laborum laborum dolor culpa ipsum velit. Non nulla nisi dolore et anim consequat officia deserunt amet qui. Incididunt exercitation irure labore ut Lorem culpa. Dolore ea irure pariatur ullamco culpa veniam amet dolor in fugiat pariatur ut. Sit non ut enim et incididunt tempor irure pariatur ex proident labore cillum dolore nisi.</span>
                                                                 </button>
                                                             </div>
-                                                        </div><!-- tab-panel active -->   
+                                                        </div>  
 
-                                                    </div><!-- tab-content -->
-                                                </div><!-- br-tab -->
-                                            </div><!-- notification-body -->
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                        </div><!-- br-notification -->
+                                        </div>
 
-                                    </div><!-- avatar dropdown -->
+                                    </div>
 
-                                </div><!-- header-avatar d-none -->
+                                </div>
 
-                            </div><!-- header-login -->
+                            </div>
+                            -->
+
 
                         </div><!-- header-actions -->
 

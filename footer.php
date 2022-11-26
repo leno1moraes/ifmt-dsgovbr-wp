@@ -125,6 +125,17 @@
         <!-- ACEITA OS COOKIES-->
         <!--<div class="br-cookiebar default d-none" tabindex="-1"></div>-->
         </div><!-- template-base -->
+
+        <script>
+            function mudarContraste(){
+                if ( (String(document.body.style.backgroundColor) == 'white') || (String(document.body.style.backgroundColor) == '') ){
+                    document.body.style.backgroundColor = 'black';
+                }else{
+                    document.body.style.backgroundColor = 'white';
+                }                
+            }
+        </script>
+
         <?php wp_footer(); ?>
     </body>
 </html>

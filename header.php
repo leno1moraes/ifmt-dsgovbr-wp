@@ -157,7 +157,7 @@
                                     -->
                                     
                                     <div class="align-items-center br-item">
-                                        <button class="br-button circle small" type="button" aria-label="Funcionalidade 4" onclick="mudarContraste()"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Funcionalidade 4</span>
+                                        <button class="br-button circle small" type="button" aria-label="Funcionalidade 4" onclick="mudarContraste()"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Tela Contraste</span>
                                         </button>
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 
 <!-- bloco aqui - inicio -->
 
-<div>
+<div class="">
 
 <?php 
         $i = 0;
@@ -38,34 +38,29 @@
 						$post_thumb = get_template_directory_uri() . '/assets/images/teste-personagem.jpg';
 					endif;
 ?>
-                    <div class="col">
+                    <div class="col-lg">
 
                         <!-- imagem da notícia -->
-                        <div class="row">
-                            <div class="col">
-                                <?php //the_post_thumbnail( 'medium' ); ?>
-                                <a href="<?php the_permalink(); ?>">
-                                <img class="rounder-sm" width="100%" height="250" src="<?php echo $post_thumb; ?>" alt="Second slide">
+                        <div class="row-fluid">
+                            <div class="col-lg">
+                                <a style="text-decoration: none;" href="<?php the_permalink(); ?>">
+
+                                    <img class="container-fluid rounder-md" width="100%" height="100%" src="<?php echo $post_thumb; ?>" alt="Second slide">                                                                                            
+
+                                    <p class="container-fluid text-base text-weight-bold text-interactive text-justify">
+                                            <?php the_title('', '', true);?>
+                                    </p>
                                 </a>
+
+                                <!--
+                                <div class="text-right">
+                                    <a class="fas fa-share-alt fa-2x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
+                                </div>  
+                                -->                              		
+                                
                             </div>
                         </div>
 
-                        <!-- botão de compartilhamento -->
-                        <div class="row">
-                            <div class="col text-right">
-                                <a class="fas fa-share-alt fa-2x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
-                            </div>
-                        </div> 
-
-                        <div class="row">
-                            <div class="col text-left">
-                                <span class="fonteBlocoNoticias">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_title();?>
-                                    </a>
-                                </span>
-                            </div>
-                        </div>                                        
                     </div>
 <?php
                 endif;

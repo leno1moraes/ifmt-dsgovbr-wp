@@ -27,8 +27,7 @@
                           <a href="<?php the_permalink(); ?>" >
                               <div class="carousel-page" active="active">
                                   <div class="carousel-content">                                                           
-                                    <img class="d-block" src="<?php echo the_post_thumbnail_url(); ?>" alt="Uma imagem aqui" style="width:100%; height: 100%; object-fit: fill;">
-                                    <?php //echo  the_post_thumbnail( 'full' ); ?>
+                                    <img class="d-block estilop1" src="<?php echo the_post_thumbnail_url(); ?>" alt="Uma imagem aqui">
                                   </div>
                               </div>
                           </a>
@@ -52,11 +51,11 @@
                       <div class="br-step" data-initial="1" data-type="simple">
                         <div class="step-progress">
 
-                          <button class="step-progress-btn" type="button"><span class="step-info">Exemplo de Rótulo 1</span></button>
-                          <button class="step-progress-btn" type="button"><span class="step-info">Exemplo de Rótulo 2</span></button>
-                          <button class="step-progress-btn" type="button"><span class="step-info">Exemplo de Rótulo 3</span></button>
-                          <button class="step-progress-btn" type="button"><span class="step-info">Exemplo de Rótulo 4</span></button>
-                          <button class="step-progress-btn" type="button"><span class="step-info">Exemplo de Rótulo 5</span></button>
+                          <button class="step-progress-btn" type="button"><span class="step-info">Rótulo 1</span></button>
+                          <button class="step-progress-btn" type="button"><span class="step-info">Rótulo 2</span></button>
+                          <button class="step-progress-btn" type="button"><span class="step-info">Rótulo 3</span></button>
+                          <button class="step-progress-btn" type="button"><span class="step-info">Rótulo 4</span></button>
+                          <button class="step-progress-btn" type="button"><span class="step-info">Rótulo 5</span></button>
 
                         </div>
                       </div>

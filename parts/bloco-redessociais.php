@@ -4,7 +4,7 @@
 
 <div class="row">
 
-    <div class="border-solid-md col-lg mt-4">
+    <div class="col-lg mt-4">
         <div class="text-center">
                     <div class="fb-page" 
                         data-href="https://www.facebook.com/100087288608436" 
@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-lg">
-        <div class="border-solid-md container-lg text-center mt-4">
+        <div class="container-lg text-center mt-4">
 
             <a class="twitter-timeline"
                                 data-height="500" 
@@ -35,7 +35,7 @@
     </div>
 
     <div class="col-lg">
-        <div class="border-solid-md text-center mt-4">
+        <div class="text-center mt-4">
 
             <blockquote
             class="instagram-media"
@@ -129,9 +129,9 @@
 
 </div>
 
-<div class="row mt-4 bg-support-03">
+<div class="row mt-4">
     <div class="col">
-        <div class="border-solid-md container text-center">
+        <div class="container text-center">
             <iframe style="width: 100%; height: 100%;"
                     src="https://www.youtube.com/embed/videoseries?list=PLW9__1e_5PUthDlB_n2uv6P-e_1P0DD3H" 
                     title="YouTube video player" 

@@ -128,11 +128,52 @@
 
         <script>
             function mudarContraste(){
-                if ( (String(document.body.style.backgroundColor) == 'white') || (String(document.body.style.backgroundColor) == '') ){
-                    document.body.style.backgroundColor = 'black';
+                if ( (String(document.body.style.backgroundColor) == '#FFFFFF') || (String(document.body.style.backgroundColor) == '') ){                    
+                    document.body.style.backgroundColor = '#000000';
+                    document.getElementsByClassName('br-button')[0].style.color = '#000000';
+
+                    //texto do bloco de notícias
+                    for ( var i = 0; i <=6; i++){
+                        document.getElementsByClassName('mdpleitura')[i].style.color = '#FFFFFF';
+                    }
+
+                    //div da área de serviços
+                    for ( var i = 0; i <=8; i++){
+                        document.getElementsByClassName('mdgleitura')[i].style.backgroundColor = '#000000';
+                    }
+                    //icones da área de serviços
+                    for ( var i = 0; i <=3; i++){
+                        document.getElementsByClassName('mdsleitura')[i].style.color = '#FFFFFF';
+                    }    
+                    //texto da área de serviços
+                    for ( var i = 0; i <=3; i++){
+                        document.getElementsByClassName('mdstleitura')[i].style.color = '#FFFFFF';
+                    }                                     
+
+
                 }else{
-                    document.body.style.backgroundColor = 'white';
-                }                
+                    document.body.style.backgroundColor = '';
+
+                    //texto do bloco de notícias
+                    for ( var i = 0; i <=6; i++){
+                        document.getElementsByClassName('mdpleitura')[i].style.color = '';
+                    }
+
+                    //div da área de servicços
+                    for ( var i = 0; i <=8; i++){
+                        document.getElementsByClassName('mdgleitura')[i].style.backgroundColor = '';
+                    }
+                    //icones da área de servicços
+                    for ( var i = 0; i <=3; i++){
+                        document.getElementsByClassName('mdsleitura')[i].style.color = '#1b2b85';
+                    } 
+                    //texto da área de serviços
+                    for ( var i = 0; i <=3; i++){
+                        document.getElementsByClassName('mdstleitura')[i].style.color = '#0c326f';
+                    }                      
+
+                }
+
             }
         </script>
 

@@ -48,16 +48,9 @@
                                     <img class="container-fluid rounder-md" width="100%" height="100%" src="<?php echo $post_thumb; ?>" alt="Second slide">                                                                                            
 
                                     <p class="container-fluid text-base text-weight-bold text-interactive text-justify">
-                                            <?php the_title('', '', true);?>
+                                            <span class="mdpleitura"><?php the_title('', '', true);?></span>
                                     </p>
-                                </a>
-
-                                <!--
-                                <div class="text-right">
-                                    <a class="fas fa-share-alt fa-2x text-blue-warm-vivid-80" target="_blank" href="https://api.whatsapp.com/send?text=<?php echo str_replace('http:', 'https:', get_permalink()); ?>"></a>
-                                </div>  
-                                -->                              		
-                                
+                                </a>                           		                                
                             </div>
                         </div>
 

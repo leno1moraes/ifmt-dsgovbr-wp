@@ -137,7 +137,7 @@
                         document.getElementsByClassName('mdpleitura')[i].style.color = '#FFFFFF';
                     }
 
-                    //div da área de serviços
+                    //##########div da área de serviços
                     for ( var i = 0; i <=8; i++){
                         document.getElementsByClassName('mdgleitura')[i].style.backgroundColor = '#000000';
                     }
@@ -148,8 +148,20 @@
                     //texto da área de serviços
                     for ( var i = 0; i <=3; i++){
                         document.getElementsByClassName('mdstleitura')[i].style.color = '#FFFFFF';
-                    }                                     
+                    }
 
+                    //##########div de ações e pogramas
+                    for ( var i = 0; i <=8; i++){
+                        document.getElementsByClassName('mdgaleitura')[i].style.backgroundColor = '#000000';
+                    }                    
+                    //texto de ações e pogramas
+                    for ( var i = 0; i <=6; i++){
+                        document.getElementsByClassName('mdpaleitura')[i].style.color = '#FFFFFF';
+                    }
+                    //texto de ações e pogramas
+                    for ( var i = 0; i <=3; i++){
+                        document.getElementsByClassName('mdsatleitura')[i].style.color = '#FFFFFF';
+                    }                    
 
                 }else{
                     document.body.style.backgroundColor = '';
@@ -170,7 +182,20 @@
                     //texto da área de serviços
                     for ( var i = 0; i <=3; i++){
                         document.getElementsByClassName('mdstleitura')[i].style.color = '#0c326f';
-                    }                      
+                    }
+                    
+                    //div de ações e pogramas
+                    for ( var i = 0; i <=8; i++){
+                        document.getElementsByClassName('mdgaleitura')[i].style.backgroundColor = '';
+                    }           
+                    //texto de ações e pogramas
+                    for ( var i = 0; i <=6; i++){
+                        document.getElementsByClassName('mdpaleitura')[i].style.color = '';
+                    }    
+                    //texto de ações e pogramas
+                    for ( var i = 0; i <=3; i++){
+                        document.getElementsByClassName('mdsatleitura')[i].style.color = '#0c326f';
+                    }                                               
 
                 }
 

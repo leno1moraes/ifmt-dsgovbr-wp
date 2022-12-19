@@ -4,10 +4,10 @@ Template Name: Page Redes Sociais
  */
 ?>
 
-<section class="mb-5 my-4x" style="background: #f8f8f8 no-repeat left bottom; padding: 30px 0">
+<section class="mb-5 my-4x mdgarleitura" style="background: #f8f8f8 no-repeat left bottom; padding: 30px 0">
 
 <div class="content text-center mb-5x">
-    <h2 class="text-blue-warm-70 text-bold">Redes Sociais</h2>
+    <h2 class="text-blue-warm-70 text-bold" > <span class="mdparleitura"> Redes Sociais</span> </h2>
 </div>            
 
 <div class="container">

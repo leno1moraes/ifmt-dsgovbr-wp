@@ -1,7 +1,7 @@
 
 
 
-        <footer class="br-footer">
+        <footer class="br-footer mdgafleitura">
             <div class="container-lg">
 
                 <div class="logo">
@@ -137,31 +137,38 @@
                         document.getElementsByClassName('mdpleitura')[i].style.color = '#FFFFFF';
                     }
 
-                    //##########div da área de serviços
                     for ( var i = 0; i <=8; i++){
+                        //div da área de serviços
                         document.getElementsByClassName('mdgleitura')[i].style.backgroundColor = '#000000';
-                    }
-                    //icones da área de serviços
-                    for ( var i = 0; i <=3; i++){
-                        document.getElementsByClassName('mdsleitura')[i].style.color = '#FFFFFF';
-                    }    
-                    //texto da área de serviços
-                    for ( var i = 0; i <=3; i++){
-                        document.getElementsByClassName('mdstleitura')[i].style.color = '#FFFFFF';
-                    }
 
-                    //##########div de ações e pogramas
-                    for ( var i = 0; i <=8; i++){
+                        //div de ações e pogramas
                         document.getElementsByClassName('mdgaleitura')[i].style.backgroundColor = '#000000';
-                    }                    
-                    //texto de ações e pogramas
-                    for ( var i = 0; i <=6; i++){
-                        document.getElementsByClassName('mdpaleitura')[i].style.color = '#FFFFFF';
                     }
-                    //texto de ações e pogramas
+                    
                     for ( var i = 0; i <=3; i++){
+                        //icones da área de serviços
+                        document.getElementsByClassName('mdsleitura')[i].style.color = '#FFFFFF';
+
+                        //texto da área de serviços
+                        document.getElementsByClassName('mdstleitura')[i].style.color = '#FFFFFF';
+
+                        //texto de ações e pogramas
                         document.getElementsByClassName('mdsatleitura')[i].style.color = '#FFFFFF';
-                    }                    
+                    }                                                                                
+                    
+                    for ( var i = 0; i <=1; i++){
+                        //texto de ações e pogramas
+                        document.getElementsByClassName('mdpaleitura')[i].style.color = '#FFFFFF';
+
+                        //##########div de redes sociais
+                        document.getElementsByClassName('mdgarleitura')[i].style.backgroundColor = '#000000';
+
+                        //texto de rede sociais
+                        document.getElementsByClassName('mdparleitura')[i].style.color = '#FFFFFF';
+                        
+                        //div do footer
+                        document.getElementsByClassName('mdgafleitura')[i].style.backgroundColor = '#000000';                        
+                    }                                              
 
                 }else{
                     document.body.style.backgroundColor = '';
@@ -171,34 +178,37 @@
                         document.getElementsByClassName('mdpleitura')[i].style.color = '';
                     }
 
-                    //div da área de servicços
                     for ( var i = 0; i <=8; i++){
-                        document.getElementsByClassName('mdgleitura')[i].style.backgroundColor = '';
-                    }
-                    //icones da área de servicços
-                    for ( var i = 0; i <=3; i++){
-                        document.getElementsByClassName('mdsleitura')[i].style.color = '#1b2b85';
-                    } 
-                    //texto da área de serviços
-                    for ( var i = 0; i <=3; i++){
-                        document.getElementsByClassName('mdstleitura')[i].style.color = '#0c326f';
+                        //div da área de serviços
+                        document.getElementsByClassName('mdgleitura')[i].style.backgroundColor = '#f8f8f8';
+
+                        //div de ações e pogramas
+                        document.getElementsByClassName('mdgaleitura')[i].style.backgroundColor = '#f8f8f8';
                     }
                     
-                    //div de ações e pogramas
-                    for ( var i = 0; i <=8; i++){
-                        document.getElementsByClassName('mdgaleitura')[i].style.backgroundColor = '';
-                    }           
-                    //texto de ações e pogramas
-                    for ( var i = 0; i <=6; i++){
-                        document.getElementsByClassName('mdpaleitura')[i].style.color = '';
-                    }    
-                    //texto de ações e pogramas
                     for ( var i = 0; i <=3; i++){
+                        //icones da área de serviços
+                        document.getElementsByClassName('mdsleitura')[i].style.color = '#1b2b85';
+
+                        //texto da área de serviços
+                        document.getElementsByClassName('mdstleitura')[i].style.color = '#0c326f';
+
+                        //texto de ações e pogramas
                         document.getElementsByClassName('mdsatleitura')[i].style.color = '#0c326f';
-                    }                                               
+                    }                                      
+                    
+                    for ( var i = 0; i <=1; i++){
+                        //texto de ações e pogramas
+                        document.getElementsByClassName('mdpaleitura')[i].style.color = '';
+                        
+                        //##########div de redes sociais
+                        document.getElementsByClassName('mdgarleitura')[i].style.backgroundColor = '#f8f8f8';
+
+                        //div do footer
+                        document.getElementsByClassName('mdgafleitura')[i].style.backgroundColor = '#071d41';                           
+                    }                                            
 
                 }
-
             }
         </script>
 

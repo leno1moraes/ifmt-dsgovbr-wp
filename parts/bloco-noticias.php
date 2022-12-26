@@ -47,7 +47,7 @@
 
                                     <img class="container-fluid rounder-md" width="100%" height="100%" src="<?php echo $post_thumb; ?>" alt="Second slide">                                                                                            
 
-                                    <p class="container-fluid text-base text-weight-bold text-interactive text-justify">
+                                    <p class="container-fluid text-base text-weight-bold text-interactive text-left">
                                             <span class="mdpleitura"><?php the_title('', '', true);?></span>
                                     </p>
                                 </a>                           		                                

@@ -42,12 +42,15 @@
 
                         <!-- imagem da notícia -->
                         <div class="row-fluid">
+                            <p class="mb-0 mr-10xh text-weight-bold">
+                            <?php echo is_null(wp_get_post_tags(get_the_ID())[0]->name) == true ? 'Notícia' : wp_get_post_tags(get_the_ID())[0]->name; ?>
+                            </p>
                             <div class="col-lg">
                                 <a style="text-decoration: none;" href="<?php the_permalink(); ?>">
 
                                     <img class="container-fluid rounder-md" width="100%" height="100%" src="<?php echo $post_thumb; ?>" alt="Second slide">                                                                                            
 
-                                    <p class="container-fluid text-base text-weight-bold text-interactive text-left">
+                                    <p class="mb-7x container-fluid text-base text-weight-bold text-interactive text-left">
                                             <span class="mdpleitura"><?php the_title('', '', true);?></span>
                                     </p>
                                 </a>                           		                                
